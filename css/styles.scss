@@ -1,0 +1,190 @@
+@import './_variables';
+@import './_mixins';
+@import './_placeholders';
+@import './_responsive';
+
+* {
+   box-sizing:border-box;
+}
+a {
+    text-decoration: none;
+}
+h4 {
+    font-style: bold;
+    color:$tertiary;
+}
+.flash{
+    color:$tertiary;
+}
+.far fa-heart {
+   color: #000; 
+}
+/*----------PARTIE MOBILES IPHONES -----------*/
+
+
+    
+@media #{$media-up} { 
+    #header { 
+       display:flex;
+       justify-content: center;
+       
+       
+   
+           .logo {
+           font-size: 10px;
+           text-align: center; 
+           font-family:$font-familyS;   
+           }   
+       } 
+          
+    .titre1 {
+    font-size: x-large;
+    
+    }
+    .barre {
+         display: flex;  
+         justify-content: center;
+         align-items: center;
+         padding:0;
+         background-color: #f6f6f6;
+         box-shadow: 0px 3px 3px #73737338 inset;
+   
+         p {
+            padding-left: 15px;
+   
+            i.fas.fa map-marker alt{
+               text-align: center;
+            }   
+         }
+   
+    }
+    .titre1 {
+       text-align: center;
+    }
+    .titre2 {
+       text-align: center;
+    
+    }
+    .bloc_filtres {
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       
+    }
+    .bouton1 {
+       text-align: center;
+    }
+    .bouton_recherche {
+      border-radius: 52px;
+      background-image: ellipse farthest-corner at 20px 0, #FF79DA 0%, #9356DC 100%;
+    }
+    #Btn1{
+       
+       
+       color: #fff;
+       
+       
+       
+       
+    }
+    .block_number {
+    color: #fff;
+       background-color: #9356dc;
+       border: 1px solid #9356dc;
+       border-radius: 50%;
+       padding: 4px 8px 4px 8px;
+       margin: 0 1.5rem 0 -12px;
+    }
+    .boutonsfiltres {
+       background-color:#e5e5e5;
+       display: inline-block;
+    }
+    
+    .Menus {
+       display: flex;
+       justify-content: space-around;
+       width:auto;
+       padding: auto;
+       background-color: #f2f2f2;
+       border-radius: 20px;
+       position: relative;
+      
+       
+    }
+    .resto {
+       height: auto;
+    }
+    .Menu_restaurant {
+      width: 280px;
+      border-radius: 15px;
+      display: flex;
+      position: relative;
+    }
+    .img_menu {
+       width: 280px;
+       height:160px;
+       object-fit: cover;
+       border-top-left-radius:10px;
+       border-top-right-radius: 10px;
+       
+         .restaurant__carte--carré {
+            border-radius: 3px;
+            background-color: #99e2d0;
+            color: #217460;
+            padding: 5px;
+            position: absolute;
+            top:12px;
+            right:10px;
+            z-index:1;
+            transform: translate(-10%, -160%);
+            opacity:1;
+         }
+       
+    }
+    .img_restaurant {
+      width: 280px;
+      
+      
+    }
+    
+    .text_menu {
+       width: 280px;
+       position: absolute;
+   
+       h4{ margin: 0;
+       }
+    }
+    .Menus {
+      display: flex;
+      flex-flow:row wrap ;
+      justify-content: space-around;
+    }
+    .titre_restaurant {
+       text-align: center;
+       font-family:$font-familyS;
+    }
+    article {
+       margin-bottom: 10px;
+       box-shadow:0 0 16px #0000002e; 
+       border-radius: 10px;
+   
+            
+      
+    }
+    footer {
+       background-color: #353535;
+       font-family:$font-familyR ;
+            a {
+               color:#fff;
+            
+                i.fas.fa-utensils {
+               color:#fff; 
+                   i.fas.fa-hands-helping {
+                     color: #fff;
+                  }
+         }
+       }
+    
+       
+     }
+   }
