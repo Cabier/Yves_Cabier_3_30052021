@@ -126,7 +126,9 @@ h4 {
             color:#9356dc ;
             
          }
-      
+    .Resto {
+       position: relative;
+    }
     
     
     
@@ -191,6 +193,10 @@ h4 {
       display: flex;
       flex-flow:row wrap ;
       justify-content: space-around;
+      margin:20px 5px;
+      border-radius: 0%;
+     
+      
     }
     .titre_restaurant {
        text-align: center;
