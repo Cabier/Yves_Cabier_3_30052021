@@ -1,7 +1,6 @@
 @charset "UTF-8";
 * {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 a {
@@ -22,73 +21,43 @@ h4 {
 }
 
 /*----------PARTIE MOBILES IPHONES -----------*/
-@media only screen and (max-width: 667px) and (min-width: 375px) and (orientation: landscape) {
+@media only screen and (max-width:375px) and (min-width:667px) {
   #header {
-    display: -webkit-box;
-    display: -ms-flexbox;
+   
+  }
+  #header .logo-container {
+    padding: 1rem 1rem 1rem 1rem;
+    position: relative;
+    box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.25);
+  }
+  #header .logo-container, #header .location {
     display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    align-items: center;
+    justify-content: center;
   }
-  #header .logo {
-    font-size: 10px;
-    text-align: center;
-    font-family: "Shrikhand";
+  #header .location {
+    background: #eee;
   }
-  .titre1 {
-    font-size: x-large;
+  #header .location i {
+    margin-right: 0.5rem;
   }
-  .barre {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    padding: 0;
-    background-color: #f6f6f6;
-    -webkit-box-shadow: 0px 3px 3px #73737338 inset;
-            box-shadow: 0px 3px 3px #73737338 inset;
-  }
-  .barre p {
-    padding-left: 15px;
-  }
-  .barre p i.fas.fa map-marker alt {
+  #header .sub-header {
+    background: #f6f6f6;
     text-align: center;
   }
-  .titre1 {
-    text-align: center;
+  #header .sub-header h1 {
+    margin: 0;
+    padding: 1rem 0;
   }
-  .titre2 {
-    text-align: center;
-  }
-  .bloc_filtres {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-  .bouton1 {
-    text-align: center;
-  }
-  .bouton_recherche {
-    border-radius: 52px;
-    background-image: ellipse farthest-corner at 20px 0, #FF79DA 0%, #9356DC 100%;
-  }
-  #Btn1 {
+  #header .sub-header button {
+    padding: 10px 15px;
+    background: #fb3fa8;
+    background: linear-gradient(160deg, #fb3fa8 0%, #9e17bb 51%);
     color: #fff;
+    border-radius: 50px;
+    margin-bottom: 40px;
   }
-  .block_number {
+  #header .block_number {
     color: #fff;
     background-color: #9356dc;
     border: 1px solid #9356dc;
@@ -96,33 +65,63 @@ h4 {
     padding: 4px 8px 4px 8px;
     margin: 0 1.5rem 0 -12px;
   }
-  .boutonsfiltres {
-    background-color: #e5e5e5;
+  #header .boutonsfiltres {
+    background-color: #ffffff;
     display: inline-block;
   }
-  .Menus {
-    display: -webkit-box;
-    display: -ms-flexbox;
+  #header .function {
     display: flex;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
+    flex-direction: column;
+    text-align: center;
+  }
+  #header .choice {
+    display: flex;
+    justify-content: flex-start;
+    margin: 20px;
+    box-shadow: 3px 3px 10px #dedada;
+    border-radius: 1rem;
+    padding: 15px;
+    align-items: center;
+    max-width: 500px;
+  }
+  #header .choice .function__step--number {
+    border-radius: 50%;
+    background-color: #9356dc;
+    border: 1px solid #9356dc;
+    padding: 4px 8px 4px 8px;
+    margin: 0 1.5rem 0 -25px;
+    color: #fff;
+  }
+  #header .choice .function__step--number .function__step--title {
+    margin-right: 2rem;
+    padding-left: 30px;
+    font-size: 15px;
+  }
+  #header .choice .function__step--number .function__step--title i.fas.fa-store {
+    color: #9356dc;
+  }
+
+  .Menus {
+    display: flex;
+    justify-content: space-around;
     width: auto;
     padding: auto;
     background-color: #f2f2f2;
     border-radius: 20px;
     position: relative;
   }
+
   .resto {
     height: auto;
   }
+
   .Menu_restaurant {
     width: 280px;
     border-radius: 15px;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
     position: relative;
   }
+
   .img_menu {
     width: 280px;
     height: 160px;
@@ -140,13 +139,14 @@ h4 {
     top: 12px;
     right: 10px;
     z-index: 1;
-    -webkit-transform: translate(-10%, -160%);
-            transform: translate(-10%, -160%);
+    transform: translate(-10%, -160%);
     opacity: 1;
   }
+
   .img_restaurant {
     width: 280px;
   }
+
   .text_menu {
     width: 280px;
     position: absolute;
@@ -154,27 +154,24 @@ h4 {
   .text_menu h4 {
     margin: 0;
   }
+
   .Menus {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-flow: row wrap;
-            flex-flow: row wrap;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
+    flex-flow: row wrap;
+    justify-content: space-around;
   }
+
   .titre_restaurant {
     text-align: center;
     font-family: "Shrikhand";
   }
+
   article {
     margin-bottom: 10px;
-    -webkit-box-shadow: 0 0 16px #0000002e;
-            box-shadow: 0 0 16px #0000002e;
-    border-radius: 10px;
+    box-shadow: 0 0 16px #0000002e;
+    border-radius: 12px;
   }
+
   footer {
     background-color: #353535;
     font-family: "Roboto", sans-serif;
@@ -189,4 +186,4 @@ h4 {
     color: #fff;
   }
 }
-/*# sourceMappingURL=styles.css.map */
+/*# sourceMappingURL=styles.css.map *//*# sourceMappingURL=styles.css.map */
