@@ -21,35 +21,35 @@ h4 {
 }
 
 /*----------PARTIE MOBILES IPHONES -----------*/
-@media only screen and (max-width:375px) and (min-width:667px) {
-  #header {
-   
-  }
+@media only screen and (max-width:375px) {
   #header .logo-container {
     padding: 1rem 1rem 1rem 1rem;
     position: relative;
     box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.25);
   }
-  #header .logo-container, #header .location {
+
+  .logo-container, .location {
     display: flex;
     align-items: center;
     justify-content: center;
   }
-  #header .location {
+
+  .location {
     background: #eee;
   }
-  #header .location i {
+  .location i {
     margin-right: 0.5rem;
   }
-  #header .sub-header {
+
+  .sub-header {
     background: #f6f6f6;
     text-align: center;
   }
-  #header .sub-header h1 {
+  .sub-header h1 {
     margin: 0;
     padding: 1rem 0;
   }
-  #header .sub-header button {
+  .sub-header button {
     padding: 10px 15px;
     background: #fb3fa8;
     background: linear-gradient(160deg, #fb3fa8 0%, #9e17bb 51%);
@@ -57,7 +57,9 @@ h4 {
     border-radius: 50px;
     margin-bottom: 40px;
   }
-  #header .block_number {
+
+  /** Section fonctionnement **/
+  .block_number {
     color: #fff;
     background-color: #9356dc;
     border: 1px solid #9356dc;
@@ -65,16 +67,20 @@ h4 {
     padding: 4px 8px 4px 8px;
     margin: 0 1.5rem 0 -12px;
   }
-  #header .boutonsfiltres {
+
+  .boutonsfiltres {
     background-color: #ffffff;
     display: inline-block;
   }
-  #header .function {
+
+  /*# sourceMappingURL=styles.css.map */
+  .function {
     display: flex;
     flex-direction: column;
     text-align: center;
   }
-  #header .choice {
+
+  .choice {
     display: flex;
     justify-content: flex-start;
     margin: 20px;
@@ -84,7 +90,7 @@ h4 {
     align-items: center;
     max-width: 500px;
   }
-  #header .choice .function__step--number {
+  .choice .function__step--number {
     border-radius: 50%;
     background-color: #9356dc;
     border: 1px solid #9356dc;
@@ -92,12 +98,14 @@ h4 {
     margin: 0 1.5rem 0 -25px;
     color: #fff;
   }
-  #header .choice .function__step--number .function__step--title {
+
+  .function__step--title {
     margin-right: 2rem;
     padding-left: 30px;
     font-size: 15px;
   }
-  #header .choice .function__step--number .function__step--title i.fas.fa-store {
+
+  i.fas.fa-store {
     color: #9356dc;
   }
 
@@ -121,16 +129,7 @@ h4 {
     display: flex;
     position: relative;
   }
-
-  .img_menu {
-    width: 280px;
-    height: 160px;
-    -o-object-fit: cover;
-       object-fit: cover;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-  }
-  .img_menu .restaurant__carte--carré {
+  .Menu_restaurant .restaurant__carte--carré {
     border-radius: 3px;
     background-color: #99e2d0;
     color: #217460;
@@ -139,8 +138,17 @@ h4 {
     top: 12px;
     right: 10px;
     z-index: 1;
-    transform: translate(-10%, -160%);
+    transform: translate(-10%, -10%);
     opacity: 1;
+  }
+
+  .img_menu {
+    width: 280px;
+    height: 160px;
+    -o-object-fit: cover;
+       object-fit: cover;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
   }
 
   .img_restaurant {

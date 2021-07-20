@@ -29,7 +29,7 @@ h4 {
          padding: 1rem 1rem 1rem 1rem;
          position: relative;
          box-shadow: 0 0 0.5rem rgb(0 0 0 / 25%); 
-      
+      }
    }
 
 
@@ -113,21 +113,22 @@ h4 {
        padding: 4px 8px 4px 8px;
        margin: 0 1.5rem 0 -25px;
        color: #fff;
-     
-         .function__step--title {
+      }
+   }     
+      .function__step--title {
             margin-right: 2rem;
         
             padding-left: 30px;
             font-size: 15px;
        
-       
+      }
             i.fas.fa-store {
             color:#9356dc ;
-            }
+            
          }
-      }
-   } 
-    }
+      
+    
+    
     
     .Menus {
        display: flex;
@@ -148,6 +149,19 @@ h4 {
       border-radius: 15px;
       display: flex;
       position: relative;
+
+      .restaurant__carte--carré {
+         border-radius: 3px;
+         background-color: #99e2d0;
+         color: #217460;
+         padding: 5px;
+         position: absolute;
+         top:12px;
+         right:10px;
+         z-index:1;
+         transform: translate(-10%, -10%);
+         opacity:1;
+      }   
     }
     .img_menu {
        width: 280px;
@@ -156,20 +170,10 @@ h4 {
        border-top-left-radius:10px;
        border-top-right-radius: 10px;
        
-         .restaurant__carte--carré {
-            border-radius: 3px;
-            background-color: #99e2d0;
-            color: #217460;
-            padding: 5px;
-            position: absolute;
-            top:12px;
-            right:10px;
-            z-index:1;
-            transform: translate(-10%, -160%);
-            opacity:1;
+         
          }
        
-    }
+   
     .img_restaurant {
       width: 280px;
       
@@ -216,4 +220,4 @@ h4 {
     
        
      }
-   }
+}
