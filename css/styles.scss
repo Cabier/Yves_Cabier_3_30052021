@@ -104,7 +104,7 @@ h4 {
      border-radius: 1rem;
      padding: 15px;
      align-items: center;
-     max-width: 500px;
+     max-width: 4500px;
    
       .function__step--number {
        border-radius: 50%;
@@ -185,11 +185,20 @@ h4 {
     
     .text_menu {
        width: 280px;
+       flex-direction: column;
+       padding: 5px 0 5px 5px;
        
    
        h4{ margin: 0;
        }
     }
+    .far.fa-heart {
+       right:1.5rem;
+       bottom: 0.5rem;
+       font-size: 24px;
+       position: absolute;
+    }
+
     .Menus {
       display: flex;
       flex-flow:row wrap ;
@@ -222,6 +231,7 @@ h4 {
                    i.fas.fa-hands-helping {
                      color: #fff;
                   }
+                  
          }
        }
     
@@ -229,4 +239,14 @@ h4 {
      }
      .menu__title {
         color: red;
-     }}
+     }
+footer {
+     &.logo--color {
+      color: green;
+   }
+   .logo {
+      color: hotpink;
+      font-size: 1140px;
+   }
+}
+}
