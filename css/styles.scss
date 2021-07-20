@@ -24,80 +24,109 @@ h4 {
 
     
 @media #{$media-up} { 
-    #header { 
-       display:flex;
-       justify-content: center;
-       
-       
+   #header {
+      .logo-container {
+         padding: 1rem 1rem 1rem 1rem;
+         position: relative;
+         box-shadow: 0 0 0.5rem rgb(0 0 0 / 25%); 
+      
+   }
+
+
+   .logo-container, .location {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+   }
+
+   .location {
+      background: #eee;
+
+      i {
+         margin-right: 0.5rem;
+      }
+   }
    
-           .logo {
-           font-size: 10px;
-           text-align: center; 
-           font-family:$font-familyS;   
-           }   
-       } 
-          
-    .titre1 {
-    font-size: x-large;
-    
-    }
-    .barre {
-         display: flex;  
-         justify-content: center;
-         align-items: center;
-         padding:0;
-         background-color: #f6f6f6;
-         box-shadow: 0px 3px 3px #73737338 inset;
+
+   .sub-header {
+   background: #f6f6f6;
+   text-align: center;
    
-         p {
-            padding-left: 15px;
+
+      h1 {
+      margin: 0;
+      padding: 1rem 0;
+      }
+
+      button {
+      padding: 10px 15px;
+      background: rgb(251,63,168);
+      background: linear-gradient(160deg, rgba(251,63,168,1) 0%, rgba(158,23,187,1) 51%); 
+      color: #fff;
+      border-radius: 50px;
+      margin-bottom: 40px;
+    } 
+
+   }
+
+      /** Section fonctionnement **/
+
+
+
+
+   .block_number {
+   color: #fff;
+   background-color: #9356dc;
+   border: 1px solid #9356dc;
+   border-radius: 50%;
+   padding: 4px 8px 4px 8px;
+   margin: 0 1.5rem 0 -12px;
+   }
+ 
+   .boutonsfiltres {
+   background-color: #ffffff;
+   display: inline-block;
+   }/*# sourceMappingURL=styles.css.map */
+ 
+ 
+   .function {
+   display: flex; 
+     flex-direction: column;
+     text-align: center;
+     
+ 
+   }
+   .choice {
+     display: flex;
+     justify-content:flex-start;
+     margin: 20px;
+     box-shadow: 3px 3px 10px #dedada;
+     border-radius: 1rem;
+     padding: 15px;
+     align-items: center;
+     max-width: 500px;
    
-            i.fas.fa map-marker alt{
-               text-align: center;
-            }   
-         }
-   
-    }
-    .titre1 {
-       text-align: center;
-    }
-    .titre2 {
-       text-align: center;
-    
-    }
-    .bloc_filtres {
-       display: flex;
-       flex-direction: column;
-       align-items: center;
-       
-    }
-    .bouton1 {
-       text-align: center;
-    }
-    .bouton_recherche {
-      border-radius: 52px;
-      background-image: ellipse farthest-corner at 20px 0, #FF79DA 0%, #9356DC 100%;
-    }
-    #Btn1{
-       
-       
-       color: #fff;
-       
-       
-       
-       
-    }
-    .block_number {
-    color: #fff;
+      .function__step--number {
+       border-radius: 50%;
        background-color: #9356dc;
        border: 1px solid #9356dc;
-       border-radius: 50%;
        padding: 4px 8px 4px 8px;
-       margin: 0 1.5rem 0 -12px;
-    }
-    .boutonsfiltres {
-       background-color:#e5e5e5;
-       display: inline-block;
+       margin: 0 1.5rem 0 -25px;
+       color: #fff;
+     
+         .function__step--title {
+            margin-right: 2rem;
+        
+            padding-left: 30px;
+            font-size: 15px;
+       
+       
+            i.fas.fa-store {
+            color:#9356dc ;
+            }
+         }
+      }
+   } 
     }
     
     .Menus {
