@@ -20,6 +20,14 @@ h4 {
   color: #000;
 }
 
+body {
+  margin: 0;
+}
+
+ul li {
+  list-style: none;
+}
+
 /*----------PARTIE MOBILES IPHONES -----------*/
 @media only screen and (min-width:375px) {
   #header .logo-container {
@@ -148,7 +156,7 @@ h4 {
   }
 
   .img_menu {
-    width: 280px;
+    width: 100%;
     height: 160px;
     -o-object-fit: cover;
        object-fit: cover;
@@ -202,23 +210,176 @@ h4 {
   footer a {
     color: #fff;
   }
-  footer a i.fas.fa-utensils {
-    color: #fff;
-  }
-  footer a i.fas.fa-utensils i.fas.fa-hands-helping {
+  footer a .fa-utensils {
     color: #fff;
   }
 
-  .menu__title {
-    color: red;
+  footer .logo2 {
+    font-size: 8px;
+    font-family: "Shrikhand";
+    padding: 10px 0px 2px 5px;
+    color: white;
+  }
+  footer .fa-hands-helping {
+    color: #fff;
+  }
+  footer .logo2 {
+    color: #fff;
   }
 
-  footer.logo--color {
-    color: green;
+  /*-----------MENUS LA PALETTE DU GOUT--------*/
+  /*----------Header-----------*/
+  .return {
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+    font-size: 25px;
   }
-  footer .logo {
-    color: hotpink;
-    font-size: 1140px;
+
+  .header__logo {
+    text-align: center;
+    font-family: "Shrikhand";
+    align-items: center;
   }
+
+  .img_palette {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+}
+/*-----------PAGE MENU---------*/
+.pagemenu {
+  background-color: #f6f6f6;
+}
+
+.pagemenu__title {
+  border-radius: 1.5rem 1.5rem 0 0;
+  padding: 2.4rem 0 0 1.5rem;
+  margin-top: -2rem;
+  background-color: white;
+  z-index: 10;
+  position: relative;
+  font-family: "Shrikhand";
+  display: flex;
+}
+.pagemenu__title h1 {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.title__heart {
+  opacity: 1;
+  position: absolute;
+  right: 30px;
+  bottom: 1.5em;
+}
+
+.menu__title {
+  color: red;
+  padding: 3rem 0 0.5rem;
+  font-size: 1rem;
+}
+
+.menu__underline {
+  width: 2.5rem;
+  border-top: 3px solid #99e2d0;
+}
+
+/*---------PLATS---------*/
+.plat__container {
+  display: flex;
+  flex-direction: column;
+}
+
+.menu__entrées {
+  background-color: #fff;
+  height: 60px;
+  cursor: pointer;
+  margin: 15px 0;
+  padding: 20px 0 25px 15px;
+  border-radius: 15px;
+  box-shadow: 3px 3px 10px #dedada;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  overflow: hidden;
+}
+
+.menu__price {
+  right: 35px;
+  bottom: 10px;
+  position: absolute;
+}
+
+.entrées__met {
+  padding: 5px 0;
+  padding-bottom: 10px;
+}
+.entrées__met .entrées__met > h3 {
+  padding-top: 10px;
+}
+
+.menu__plats {
+  background-color: #fff;
+  height: 70px;
+  cursor: pointer;
+  margin: 15px 0;
+  padding: 5px 0 25px 15px;
+  border-radius: 15px;
+  box-shadow: 3px 3px 10px #dedada;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  overflow: hidden;
+}
+
+.subfooterbutton {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.button {
+  padding: 15px 35px;
+  background: #fb3fa8;
+  background: linear-gradient(160deg, #fb3fa8 0%, #9e17bb 51%);
+  color: #fff;
+  border-radius: 50px;
+  margin: 0;
+  font-size: large;
+  align-items: center;
+}
+
+/*-------FOOTER-------*/
+footer .logo2 {
+  font-size: 10px;
+  font-family: "Shrikhand";
+  padding: 10px 0px 2px 20px;
+  color: white;
+}
+footer .logo2 .propostion {
+  display: flex;
+}
+
+footer .pro ul li::before {
+  content: "";
+  font-family: fontawesome;
+  color: #fff;
+  margin-left: -1rem;
+  padding-right: 10px;
+}
+
+ul li::before {
+  content: "";
+  font-family: fontawesome;
+  color: #fff;
+  margin-left: -1.4rem;
+  padding-right: 10px;
+}
+
+.lien2 {
+  padding-left: 20px;
 }
 /*# sourceMappingURL=styles.css.map *//*# sourceMappingURL=styles.css.map */
