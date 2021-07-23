@@ -1,6 +1,25 @@
 @charset "UTF-8";
+@media (min-width: 320px) {
+  /* smartphones, portrait iPhone, portrait 480x320 phones (Android) */
+}
+@media (min-width: 480px) {
+  /* smartphones, Android phones, landscape iPhone */
+}
+@media (min-width: 600px) {
+  /* portrait tablets, portrait iPad, e-readers (Nook/Kindle), landscape 800x480 phones (Android) */
+}
+@media (min-width: 801px) {
+  /* tablet, landscape iPad, lo-res laptops ands desktops */
+}
+@media (min-width: 1025px) {
+  /* big landscape tablets, laptops, and desktops */
+}
+@media (min-width: 1281px) {
+  /* hi-res laptops and desktops */
+}
 * {
   box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
 }
 
 a {
@@ -29,7 +48,11 @@ ul li {
 }
 
 /*----------PARTIE MOBILES IPHONES -----------*/
-@media only screen and (min-width:375px) {
+@media only screen and (min-width:320px) {
+  body {
+    margin: 0;
+  }
+
   #header .logo-container {
     padding: 1rem 1rem 1rem 1rem;
     position: relative;
@@ -55,12 +78,13 @@ ul li {
   }
   .sub-header h1 {
     margin: 0;
-    padding: 1rem 0;
+    padding: 1rem 2.5rem;
+    font-size: 25px;
   }
   .sub-header button {
     padding: 10px 15px;
     background: #fb3fa8;
-    background: linear-gradient(160deg, #fb3fa8 0%, #9e17bb 51%);
+    background: linear-gradient(160deg, #fb3fa8 0%, #9e17bb 100%);
     color: #fff;
     border-radius: 50px;
     margin-bottom: 40px;
@@ -103,36 +127,44 @@ ul li {
     background-color: #9356dc;
     border: 1px solid #9356dc;
     padding: 4px 8px 4px 8px;
-    margin: 0 1.5rem 0 -25px;
+    margin: 0 1rem 0 -25px;
     color: #fff;
   }
 
   .function__step--title {
     margin-right: 2rem;
-    padding-left: 30px;
-    font-size: 15px;
+    font-weight: bold;
+    padding-left: 15px;
+    font-size: 13px;
   }
 
   i.fas.fa-store {
     color: #9356dc;
   }
 
+  i.fas.fa-mobile-alt, i.fas.fa-list-ul {
+    color: #7e7e7e;
+  }
+
   .Resto {
     position: relative;
+    margin: 0;
   }
 
   .Menus {
     display: flex;
-    justify-content: space-around;
+    flex-direction: column;
     width: auto;
-    padding: 40px 0;
+    padding: 40px 10px;
     background-color: #f2f2f2;
-    border-radius: 20px;
+    border-radius: 0;
     position: relative;
+    margin: 0;
   }
 
   .resto {
     height: auto;
+    margin: 0;
   }
 
   .Menu_restaurant {
@@ -151,27 +183,37 @@ ul li {
     top: 12px;
     right: 10px;
     z-index: 1;
-    transform: translate(-10%, -10%);
+    transform: translate(-10%, 10%);
     opacity: 1;
   }
 
   .img_menu {
     width: 100%;
-    height: 160px;
     -o-object-fit: cover;
        object-fit: cover;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
   }
 
+  .img_menu--enchantée {
+    height: 180px;
+  }
+
   .img_restaurant {
     width: 280px;
+    position: relative;
+    -o-object-fit: cover;
+       object-fit: cover;
   }
 
   .text_menu {
     width: 280px;
     flex-direction: column;
-    padding: 5px 0 5px 5px;
+    align-content: space-around;
+    padding: 10px 0 10px 10px;
+    background-color: #fff;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
   }
   .text_menu h4 {
     margin: 0;
@@ -179,7 +221,7 @@ ul li {
 
   .far.fa-heart {
     right: 1.5rem;
-    bottom: 0.5rem;
+    bottom: 0.9rem;
     font-size: 24px;
     position: absolute;
   }
@@ -251,6 +293,7 @@ ul li {
 /*-----------PAGE MENU---------*/
 .pagemenu {
   background-color: #f6f6f6;
+  padding: 8px;
 }
 
 .pagemenu__title {
@@ -309,17 +352,13 @@ ul li {
 
 .menu__price {
   right: 35px;
-  bottom: 10px;
   position: absolute;
   font-size: 18px;
 }
 
 .entrées__met {
   padding: 5px 0;
-  padding-bottom: 10px;
-}
-.entrées__met .entrées__met > h3 {
-  padding-top: 10px;
+  line-height: 2px;
 }
 
 .menu__plats {
@@ -382,5 +421,76 @@ ul li::before {
 
 .lien2 {
   padding-left: 20px;
+}
+
+@media screen and (min-width: 480px) {
+  .sub-header button {
+    font-size: 20px;
+  }
+
+  .function__step--title {
+    font-size: 18px;
+  }
+
+  .Menu_restaurant {
+    width: 380px;
+  }
+
+  .img_restaurant {
+    width: 380px;
+    position: relative;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+
+  .Menu_restaurant .restaurant__carte--carré {
+    font-size: 20px;
+  }
+
+  .img_menu--enchantée {
+    height: 240px;
+  }
+
+  .text_menu {
+    width: 380px;
+  }
+
+  footer * {
+    font-size: 20px;
+    text-align: center;
+    padding: auto;
+  }
+}
+@media screen and (min-width: 600px) {
+  .function__step--title {
+    font-size: 20px;
+    padding-left: 50px;
+  }
+
+  .function__step--icon {
+    font-size: 26px;
+    padding-left: 15px;
+  }
+
+  .Menu_restaurant {
+    width: 420px;
+  }
+
+  .img_restaurant {
+    width: 420px;
+    position: relative;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+
+  .text_menu {
+    width: 420px;
+  }
+
+  footer * {
+    font-size: 24px;
+    text-align: center;
+    padding: auto;
+  }
 }
 /*# sourceMappingURL=styles.css.map *//*# sourceMappingURL=styles.css.map */
