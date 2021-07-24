@@ -579,6 +579,16 @@ ul li::before {
   }
 }
 @media screen and (min-width: 1281px) {
+  main {
+    display: grid;
+    grid-template-columns: auto auto;
+  }
+  .sub-header {
+   display: flex; 
+   flex-direction: column;
+   align-items: center;
+   align-self:center;
+  }
   .sub-header h4 {
     font-size: 45px;
   }
