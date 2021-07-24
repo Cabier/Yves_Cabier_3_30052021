@@ -468,6 +468,10 @@ ul li::before {
   }
 }
 @media screen and (min-width: 600px) {
+  .function {
+    align-items: center;
+  }
+
   .function__step--title {
     font-size: 20px;
     padding-left: 50px;
@@ -500,6 +504,10 @@ ul li::before {
   }
 }
 @media screen and (min-width: 801px) {
+  .function {
+    align-items: center;
+  }
+
   .function__step--title {
     font-size: 20px;
     padding-left: 60px;
@@ -512,6 +520,99 @@ ul li::before {
 
   .function__step--number {
     font-size: 15px;
+  }
+
+  .Menu_restaurant {
+    width: 700px;
+  }
+
+  .img_menu--enchantée {
+    height: 180px;
+    width: 700px;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+
+  .img_menu {
+    height: 180px;
+    width: 700px;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+
+  .text_menu {
+    width: 700px;
+  }
+
+  .Menu_restaurant .restaurant__carte--carré {
+    transform: translate(280%, 10%);
+  }
+}
+@media screen and (min-width: 1025px) {
+  .sub-header h1 {
+    font-size: 30px;
+  }
+
+  .sub-header p {
+    font-size: 20px;
+  }
+
+  .Menu_restaurant {
+    display: flex;
+    flex-wrap: wrap;
+    width: 400px;
+  }
+
+  .img_menu {
+    width: 400px;
+  }
+  .img_menu .img_menu--enchantée {
+    width: 400px;
+  }
+
+  .text_menu {
+    width: 400px;
+  }
+
+  .Menu_restaurant .restaurant__carte--carré {
+    transform: translate(-30%, 10%);
+  }
+}
+@media screen and (min-width: 1281px) {
+  .sub-header h4 {
+    font-size: 45px;
+  }
+
+  .sub-header p {
+    font-size: 25px;
+  }
+
+  .sub-header button {
+    font-size: 25px;
+  }
+
+  .Menu_restaurant {
+    display: flex;
+    flex-wrap: wrap;
+    width: 480px;
+  }
+
+  .img_menu {
+    width: 480px;
+    height: 220px;
+  }
+  .img_menu .img_menu--enchantée {
+    width: 480px;
+  }
+
+  .text_menu {
+    width: 480px;
+    font-size: 20px;
+  }
+
+  .Menu_restaurant .restaurant__carte--carré {
+    transform: translate(30%, 10%);
+    font-size: 20px;
   }
 }
 /*# sourceMappingURL=styles.css.map *//*# sourceMappingURL=styles.css.map */
