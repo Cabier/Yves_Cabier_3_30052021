@@ -453,6 +453,12 @@ ul li::before {
 
   .text_menu {
     width: 380px;
+    padding: 15px 15px;
+    font-size: 18px;
+  }
+
+  .far.fa-heart {
+    bottom: 1.5rem;
   }
 
   footer * {
@@ -491,6 +497,21 @@ ul li::before {
     font-size: 24px;
     text-align: center;
     padding: auto;
+  }
+}
+@media screen and (min-width: 801px) {
+  .function__step--title {
+    font-size: 20px;
+    padding-left: 60px;
+  }
+
+  .function__step--icon {
+    font-size: 26px;
+    padding-left: 25px;
+  }
+
+  .function__step--number {
+    font-size: 15px;
   }
 }
 /*# sourceMappingURL=styles.css.map *//*# sourceMappingURL=styles.css.map */
