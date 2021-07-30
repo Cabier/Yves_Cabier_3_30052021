@@ -53,6 +53,69 @@ ul li {
     margin: 0;
   }
 
+  .section11 {
+    position: fixed;
+  }
+
+  .logo1 {
+    z-index: -9999;
+    position: fixed;
+  }
+
+  .loader {
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    z-index: -9999;
+    position: fixed;
+  }
+
+  .loader-quart {
+    border-radius: 50px;
+    border: 6px solid rgba(255, 255, 255, 0.4);
+    z-index: -9999;
+    position: fixed;
+  }
+
+  .loader-quart:after {
+    content: "";
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: -6px;
+    left: -6px;
+    bottom: -6px;
+    right: -6px;
+    width: 50px;
+    height: 50px;
+    border: 6px solid transparent;
+    border-radius: 50px;
+    border-top-color: orange;
+    -webkit-animation: spin 13s linear 0s;
+            animation: spin 13s linear 0s;
+    z-index: -9999;
+    position: fixed;
+  }
+
+  @-webkit-keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
   #header .logo-container {
     padding: 1rem 1rem 1rem 1rem;
     position: relative;
@@ -83,11 +146,16 @@ ul li {
   }
   .sub-header button {
     padding: 10px 15px;
-    background: #fb3fa8;
     background: linear-gradient(160deg, #fb3fa8 0%, #9e17bb 100%);
     color: #fff;
     border-radius: 50px;
     margin-bottom: 40px;
+  }
+  .sub-header button:hover {
+    transform: scale(1.5);
+    transition: 1500ms;
+    rotate: 55%;
+    background: #fc71bf;
   }
 
   /** Section fonctionnement **/
@@ -120,7 +188,7 @@ ul li {
     border-radius: 1rem;
     padding: 15px;
     align-items: center;
-    max-width: 4500px;
+    max-width: 600px;
   }
   .choice .function__step--number {
     border-radius: 50%;
@@ -173,6 +241,7 @@ ul li {
     display: flex;
     position: relative;
     flex-direction: column;
+    box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.5);
   }
   .Menu_restaurant .restaurant__carte--carré {
     border-radius: 3px;
@@ -226,6 +295,15 @@ ul li {
     position: absolute;
   }
 
+  .coeur__svg {
+    right: 1.5rem;
+    bottom: 0.9rem;
+    font-size: 4px;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+  }
+
   .Menus {
     display: flex;
     flex-flow: row wrap;
@@ -256,6 +334,10 @@ ul li {
     color: #fff;
   }
 
+  footer {
+    /*-----------MENUS LA PALETTE DU GOUT--------*/
+    /*----------Header-----------*/
+  }
   footer .logo2 {
     font-size: 8px;
     font-family: "Shrikhand";
@@ -268,94 +350,122 @@ ul li {
   footer .logo2 {
     color: #fff;
   }
-
-  /*-----------MENUS LA PALETTE DU GOUT--------*/
-  /*----------Header-----------*/
-  .return {
+  footer .return {
     position: absolute;
     top: 2rem;
     left: 2rem;
     font-size: 25px;
   }
-
-  .header__logo {
+  footer .header__logo {
     text-align: center;
     font-family: "Shrikhand";
     align-items: center;
   }
-
-  .img_palette {
+  footer .img_palette--height {
+    max-height: 300px;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  footer .img_palette {
     width: 100%;
     padding: 0;
     margin: 0;
   }
-}
-/*-----------PAGE MENU---------*/
-.pagemenu {
-  background-color: #f6f6f6;
-  padding: 8px;
-}
 
-.pagemenu__title {
-  border-radius: 1.5rem 1.5rem 0 0;
-  padding: 2.4rem 0 0 1.5rem;
-  margin-top: -2rem;
-  background-color: white;
-  z-index: 10;
-  position: relative;
-  font-family: "Shrikhand";
-  display: flex;
-}
-.pagemenu__title h1 {
-  font-size: 24px;
-  font-weight: bold;
-}
+  /*-----------PAGE MENU---------*/
+  .pagemenu {
+    background-color: #f6f6f6;
+    padding: 8px;
+  }
 
-.title__heart {
-  opacity: 1;
-  position: absolute;
-  right: 30px;
-  bottom: 1.5em;
-}
+  .pagemenu__title {
+    border-radius: 1.5rem 1.5rem 0 0;
+    padding: 2.4rem 0 0 1.5rem;
+    margin-top: -2rem;
+    background-color: white;
+    z-index: 10;
+    position: relative;
+    font-family: "Shrikhand";
+    display: flex;
+  }
+  .pagemenu__title h1 {
+    font-size: 24px;
+    font-weight: bold;
+  }
 
-.menu__title {
-  color: red;
-  padding: 3rem 0 0.5rem;
-  font-size: 1rem;
-}
+  .title__heart {
+    opacity: 1;
+    position: absolute;
+    right: 30px;
+    bottom: 1.5em;
+  }
 
-.menu__underline {
-  width: 2.5rem;
-  border-top: 3px solid #99e2d0;
-}
+  .menu__title {
+    color: red;
+    padding: 3rem 0 0.5rem;
+    font-size: 1rem;
+  }
 
-/*---------PLATS---------*/
-.plat__container {
-  display: flex;
-  flex-direction: column;
-}
+  .menu__underline {
+    width: 2.5rem;
+    border-top: 3px solid #99e2d0;
+  }
 
-.menu__entrées {
-  background-color: #fff;
-  height: 60px;
-  cursor: pointer;
-  margin: 15px 0;
-  padding: 20px 0 25px 15px;
-  border-radius: 15px;
-  box-shadow: 3px 3px 10px #dedada;
-  position: relative;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  overflow: hidden;
-}
+  /*---------PLATS---------*/
+  .plat__container {
+    display: flex;
+    flex-direction: column;
+  }
 
-.menu__price {
-  right: 35px;
-  position: absolute;
-  font-size: 18px;
-}
+  .menu__entrées {
+    background-color: #fff;
+    height: 60px;
+    cursor: pointer;
+    margin: 15px 0;
+    padding: 20px 0 25px 15px;
+    border-radius: 15px;
+    box-shadow: 3px 3px 10px #dedada;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    overflow: hidden;
+  }
 
+  .menu__entrées > h3 {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-size: 8px;
+  }
+
+  .menu__price {
+    right: 35px;
+    position: absolute;
+    font-size: 18px;
+  }
+
+  .menu__animation :hover :hover .fas.fa-check-circle {
+    -webkit-animation: slide-left 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+    animation: slide-left 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  }
+}
+@-webkit-keyframes slide-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100px);
+  }
+}
+@keyframes slide-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100px);
+  }
+}
 .entrées__met {
   padding: 5px 0;
   line-height: 2px;
@@ -363,10 +473,10 @@ ul li {
 
 .menu__plats {
   background-color: #fff;
-  height: 70px;
+  height: 60px;
   cursor: pointer;
   margin: 15px 0;
-  padding: 5px 0 25px 15px;
+  padding: 20px 0 25px 15px;
   border-radius: 15px;
   box-shadow: 3px 3px 10px #dedada;
   position: relative;
@@ -384,7 +494,7 @@ ul li {
 .button {
   padding: 15px 35px;
   background: #fb3fa8;
-  background: linear-gradient(160deg, #fb3fa8 0%, #9e17bb 51%);
+  background: linear-gradient(160deg, #fb3fa8 10%, #9e17bb 95%);
   color: #fff;
   border-radius: 50px;
   margin: 0;
@@ -480,6 +590,10 @@ ul li::before {
   .function__step--icon {
     font-size: 26px;
     padding-left: 15px;
+  }
+
+  .choice {
+    max-width: 360px;
   }
 
   .Menu_restaurant {
@@ -579,16 +693,6 @@ ul li::before {
   }
 }
 @media screen and (min-width: 1281px) {
-  main {
-    display: grid;
-    grid-template-columns: auto auto;
-  }
-  .sub-header {
-   display: flex; 
-   flex-direction: column;
-   align-items: center;
-   align-self:center;
-  }
   .sub-header h4 {
     font-size: 45px;
   }
@@ -623,6 +727,76 @@ ul li::before {
   .Menu_restaurant .restaurant__carte--carré {
     transform: translate(30%, 10%);
     font-size: 20px;
+  }
+}
+@media screen and (min-width: 1480px) {
+  footer {
+    display: flex;
+    padding-right: 15px;
+  }
+
+  .logo2 {
+    margin-left: 120px;
+  }
+
+  .lienfooter {
+    display: flex;
+    padding-left: 120px;
+  }
+
+  .proposition {
+    padding-left: 200px;
+  }
+
+  .pro {
+    padding-left: 65px;
+  }
+
+  .dev {
+    padding-left: 65px;
+  }
+
+  .mention {
+    padding-left: 65px;
+  }
+
+  .contact {
+    padding-left: 65px;
+  }
+
+  .lien2 {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .pagemenu {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .Menu_restaurant {
+    display: flex;
+    flex-wrap: wrap;
+    width: 400px;
+  }
+
+  .img_menu {
+    width: 400px;
+  }
+
+  .text_menu {
+    width: 400px;
+  }
+
+  .restaurant__carte--carré {
+    transform: translate(-14%, 10%);
+  }
+
+  .search_button .btn {
+    transition: all 450ms;
+  }
+  .search_button .btn:hover {
+    transform: scale(1.13);
   }
 }
 /*# sourceMappingURL=styles.css.map *//*# sourceMappingURL=styles.css.map */
