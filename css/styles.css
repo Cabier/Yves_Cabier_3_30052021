@@ -22,6 +22,11 @@
   font-family: "Roboto", sans-serif;
 }
 
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 a {
   text-decoration: none;
 }
@@ -54,11 +59,10 @@ ul li {
   }
 
   .section11 {
-    position: fixed;
+    z-index: -9999;
   }
 
   .logo1 {
-    z-index: -9999;
     position: fixed;
   }
 
@@ -81,8 +85,8 @@ ul li {
 
   .loader-quart:after {
     content: "";
-    width: 50px;
-    height: 50px;
+    width: 250px;
+    height: 250px;
     position: absolute;
     top: -6px;
     left: -6px;
@@ -288,22 +292,123 @@ ul li {
     margin: 0;
   }
 
-  .far.fa-heart {
-    right: 1.5rem;
-    bottom: 0.9rem;
-    font-size: 24px;
+  .icones {
+    fill: transparent;
+    stroke: var(--pink);
+    stroke-width: 20;
+    cursor: pointer;
+    position: relative;
+  }
+  .icones svg {
+    overflow: visible;
+    width: 10rem;
+  }
+  .icones path {
+    stroke-dashoffset: 0;
+    stroke-dasharray: 1550;
+    transform-origin: center;
+  }
+  .icones .heart-background {
     position: absolute;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    stroke: none;
+  }
+  .icones .heart-main:hover path {
+    -webkit-animation: stroke-animation 2s ease-in-out forwards;
+            animation: stroke-animation 2s ease-in-out forwards;
+  }
+  .icones .heart-main:hover ~ .heart-background path {
+    -webkit-animation: fade-animation 2s ease-in-out forwards;
+            animation: fade-animation 2s ease-in-out forwards;
   }
 
-  .coeur__svg {
-    right: 1.5rem;
-    bottom: 0.9rem;
-    font-size: 4px;
-    position: absolute;
-    width: 20px;
-    height: 20px;
+  @-webkit-keyframes stroke-animation {
+    0% {
+      stroke-dashoffset: 0;
+    }
+    30% {
+      stroke-dashoffset: 1550;
+    }
+    60% {
+      stroke-dashoffset: 3100;
+      fill: transparent;
+      transform: scale(1);
+    }
+    80% {
+      fill: var(--pink);
+      transform: scale(1.1);
+    }
+    90% {
+      transform: scale(1);
+    }
+    100% {
+      stroke-dashoffset: 3100;
+      fill: var(--pink);
+    }
   }
 
+  @keyframes stroke-animation {
+    0% {
+      stroke-dashoffset: 0;
+    }
+    30% {
+      stroke-dashoffset: 1550;
+    }
+    60% {
+      stroke-dashoffset: 3100;
+      fill: transparent;
+      transform: scale(1);
+    }
+    80% {
+      fill: var(--pink);
+      transform: scale(1.1);
+    }
+    90% {
+      transform: scale(1);
+    }
+    100% {
+      stroke-dashoffset: 3100;
+      fill: var(--pink);
+    }
+  }
+  @-webkit-keyframes fade-animation {
+    70% {
+      fill: transparent;
+      transform: scale(1);
+    }
+    80% {
+      fill: var(--pink-light);
+      transform: scale(1.1);
+      opacity: 1;
+    }
+    90% {
+      opacity: 1;
+    }
+    100% {
+      transform: scale(2.5);
+      opacity: 0;
+    }
+  }
+  @keyframes fade-animation {
+    70% {
+      fill: transparent;
+      transform: scale(1);
+    }
+    80% {
+      fill: var(--pink-light);
+      transform: scale(1.1);
+      opacity: 1;
+    }
+    90% {
+      opacity: 1;
+    }
+    100% {
+      transform: scale(2.5);
+      opacity: 0;
+    }
+  }
   .Menus {
     display: flex;
     flex-flow: row wrap;
@@ -334,122 +439,126 @@ ul li {
     color: #fff;
   }
 
-  footer {
-    /*-----------MENUS LA PALETTE DU GOUT--------*/
-    /*----------Header-----------*/
-  }
-  footer .logo2 {
+  .logo2 {
     font-size: 8px;
     font-family: "Shrikhand";
     padding: 10px 0px 2px 5px;
     color: white;
   }
-  footer .fa-hands-helping {
+
+  .fa-hands-helping {
     color: #fff;
   }
-  footer .logo2 {
+
+  .logo2 {
     color: #fff;
   }
-  footer .return {
+
+  /*-----------MENUS LA PALETTE DU GOUT--------*/
+  /*----------Header-----------*/
+  .return {
     position: absolute;
     top: 2rem;
     left: 2rem;
     font-size: 25px;
   }
-  footer .header__logo {
+
+  .header__logo {
     text-align: center;
     font-family: "Shrikhand";
     align-items: center;
   }
-  footer .img_palette--height {
+
+  .img_palette--height {
     max-height: 300px;
     -o-object-fit: cover;
        object-fit: cover;
   }
-  footer .img_palette {
+
+  .img_palette {
     width: 100%;
     padding: 0;
     margin: 0;
   }
-
-  /*-----------PAGE MENU---------*/
-  .pagemenu {
-    background-color: #f6f6f6;
-    padding: 8px;
-  }
-
-  .pagemenu__title {
-    border-radius: 1.5rem 1.5rem 0 0;
-    padding: 2.4rem 0 0 1.5rem;
-    margin-top: -2rem;
-    background-color: white;
-    z-index: 10;
-    position: relative;
-    font-family: "Shrikhand";
-    display: flex;
-  }
-  .pagemenu__title h1 {
-    font-size: 24px;
-    font-weight: bold;
-  }
-
-  .title__heart {
-    opacity: 1;
-    position: absolute;
-    right: 30px;
-    bottom: 1.5em;
-  }
-
-  .menu__title {
-    color: red;
-    padding: 3rem 0 0.5rem;
-    font-size: 1rem;
-  }
-
-  .menu__underline {
-    width: 2.5rem;
-    border-top: 3px solid #99e2d0;
-  }
-
-  /*---------PLATS---------*/
-  .plat__container {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .menu__entrées {
-    background-color: #fff;
-    height: 60px;
-    cursor: pointer;
-    margin: 15px 0;
-    padding: 20px 0 25px 15px;
-    border-radius: 15px;
-    box-shadow: 3px 3px 10px #dedada;
-    position: relative;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    overflow: hidden;
-  }
-
-  .menu__entrées > h3 {
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    font-size: 8px;
-  }
-
-  .menu__price {
-    right: 35px;
-    position: absolute;
-    font-size: 18px;
-  }
-
-  .menu__animation :hover :hover .fas.fa-check-circle {
-    -webkit-animation: slide-left 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-    animation: slide-left 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-  }
 }
+/*-----------PAGE MENU---------*/
+.pagemenu {
+  background-color: #f6f6f6;
+  padding: 8px;
+}
+
+.pagemenu__title {
+  border-radius: 1.5rem 1.5rem 0 0;
+  padding: 2.4rem 0 0 1.5rem;
+  margin-top: -2rem;
+  background-color: white;
+  z-index: 10;
+  position: relative;
+  font-family: "Shrikhand";
+  display: flex;
+}
+.pagemenu__title h1 {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.title__heart {
+  opacity: 1;
+  position: absolute;
+  right: 30px;
+  bottom: 1.5em;
+}
+
+.menu__title {
+  color: red;
+  padding: 3rem 0 0.5rem;
+  font-size: 1rem;
+}
+
+.menu__underline {
+  width: 2.5rem;
+  border-top: 3px solid #99e2d0;
+}
+
+/*---------PLATS---------*/
+.plat__container {
+  display: flex;
+  flex-direction: column;
+}
+
+.menu__entrées {
+  background-color: #fff;
+  height: 60px;
+  cursor: pointer;
+  margin: 15px 0;
+  padding: 20px 0 25px 15px;
+  border-radius: 15px;
+  box-shadow: 3px 3px 10px #dedada;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  overflow: hidden;
+}
+
+.menu__entrées > h3 {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-size: 8px;
+}
+
+.menu__price {
+  right: 35px;
+  position: absolute;
+  font-size: 18px;
+}
+
+.menu__animation :hover .fas.fa-check-circle {
+  -webkit-animation: slide-left 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: slide-left 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
 @-webkit-keyframes slide-left {
   0% {
     transform: translateX(0);
@@ -788,8 +897,8 @@ ul li::before {
     width: 400px;
   }
 
-  .restaurant__carte--carré {
-    transform: translate(-14%, 10%);
+  .Menu_restaurant.restaurant__carte--carré {
+    transform: translate(-30%, 10%);
   }
 
   .search_button .btn {

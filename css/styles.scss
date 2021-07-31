@@ -7,7 +7,10 @@
 * {
    box-sizing:border-box;
    font-family: $font-familyR;
+   
 }
+*::before,
+*::after {box-sizing:border-box;}
 a {
     text-decoration: none;
 }
@@ -35,11 +38,11 @@ ul li {list-style: none;}
    }
    .section11 {
     
-     position: fixed;
-    
+     
+     z-index: -9999;
    }
    .logo1 {
-      z-index: -9999;  
+       
       position: fixed; 
    }
    .loader {
@@ -59,8 +62,8 @@ ul li {list-style: none;}
    }
    .loader-quart:after{
       content: '';
-      width: 50px;
-      height: 50px;
+      width: 250px;
+      height: 250px;
       position: absolute;
       top: -6px;
       left: -6px;
@@ -272,21 +275,85 @@ ul li {list-style: none;}
        h4{ margin: 0;
        }
     }
-    .far.fa-heart {
-       right:1.5rem;
-       bottom: 0.9rem;
-       font-size: 24px;
-       position: absolute;
+    .icones {
+      fill: transparent;
+      stroke: var(--pink);
+      stroke-width: 20;
+      cursor: pointer;
+      position: relative;
+    
+      svg {
+        overflow: visible;
+        width: 10rem;
+      }
+    
+      path {
+        stroke-dashoffset: 0;
+        stroke-dasharray: 1550;
+        transform-origin: center;
+      }
+    
+      .heart-background {
+        position: absolute;
+        left: 0;
+        right: 0;
+        z-index: -1;
+        stroke: none;
+      }
+    
+      .heart-main:hover path {
+        animation: stroke-animation 2s ease-in-out forwards;
+      }
+    
+      .heart-main:hover ~ .heart-background path {
+        animation: fade-animation 2s ease-in-out forwards;
+      }
     }
-    .coeur__svg {
-      right:1.5rem;
-       bottom: 0.9rem;
-       font-size: 4px;
-       position: absolute;
-       width: 20px;
-       height: 20px;
+    
+    @keyframes stroke-animation {
+      0% {
+        stroke-dashoffset: 0;
+      }
+      30% {
+        stroke-dashoffset: 1550;
+      }
+      60% {
+        stroke-dashoffset: 3100;
+        fill: transparent;
+        transform: scale(1);
+      }
+      80% {
+        fill: var(--pink);
+        transform: scale(1.1);
+      }
+      90% {
+        transform: scale(1);
+      }
+      100% {
+        stroke-dashoffset: 3100;
+        fill: var(--pink);
+      }
     }
-
+    
+    @keyframes fade-animation {
+      70% {
+        fill: transparent;
+        transform: scale(1);
+      }
+      80% {
+        fill: var(--pink-light);
+        transform: scale(1.1);
+        opacity: 1;
+      }
+      90% {
+        opacity: 1;
+      }
+      100% {
+        transform: scale(2.5);
+        opacity: 0;
+      }
+    }
+    
     .Menus {
       display: flex;
       flex-flow:row wrap ;
@@ -325,7 +392,7 @@ ul li {list-style: none;}
        
      
      }
-     footer {
+     
       .logo2 {
          font-size: 8px;
          font-family:$font-familyS;
@@ -449,12 +516,12 @@ ul li {list-style: none;}
 }
 .menu__animation :hover{
          
-        :hover 
+         
         .fas.fa-check-circle  {
          -webkit-animation:slide-left .5s cubic-bezier(.25,.46,.45,.94) both;animation:slide-left .5s cubic-bezier(.25,.46,.45,.94) both}   
          }
          
-}
+
 @-webkit-keyframes slide-left{0%{-webkit-transform:translateX(0);transform:translateX(0)}100%{-webkit-transform:translateX(-100px);transform:translateX(-100px)}}@keyframes slide-left{0%{-webkit-transform:translateX(0);transform:translateX(0)}100%{-webkit-transform:translateX(-100px);transform:translateX(-100px)}}
 .entrées__met {
 padding: 5px 0;
@@ -744,8 +811,8 @@ ul li::before{content: "\f4c4";font-family: fontawesome;color: #fff;margin-left:
          .text_menu {
                   width: 400px;
          }
-                  .restaurant__carte--carré {
-                  transform: translate(-14%,10%);  
+         .Menu_restaurant.restaurant__carte--carré {
+                  transform: translate(-30%,10%);  
                   }
       
          .search_button {
