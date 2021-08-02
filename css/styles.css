@@ -46,34 +46,37 @@ h4 {
 
 body {
   margin: 0;
+  padding: 0;
+  min-height: 100vh;
 }
 
 ul li {
   list-style: none;
 }
 
+footer {
+  margin: 0;
+}
+
 /*----------PARTIE MOBILES IPHONES -----------*/
 @media only screen and (min-width:320px) {
   body {
     margin: 0;
-  }
-
-  .section11 {
-    z-index: -9999;
-  }
-
-  .logo1 {
-    position: fixed;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
   }
 
   .loader {
-    width: 50px;
-    height: 50px;
+    width: 150px;
+    height: 150px;
     display: inline-block;
     vertical-align: middle;
-    position: relative;
-    z-index: -9999;
+    z-index: 9999;
     position: fixed;
+    display: flex;
+    text-align: center;
+    align-items: center;
   }
 
   .loader-quart {
@@ -85,13 +88,6 @@ ul li {
 
   .loader-quart:after {
     content: "";
-    width: 250px;
-    height: 250px;
-    position: absolute;
-    top: -6px;
-    left: -6px;
-    bottom: -6px;
-    right: -6px;
     width: 50px;
     height: 50px;
     border: 6px solid transparent;
@@ -99,7 +95,6 @@ ul li {
     border-top-color: orange;
     -webkit-animation: spin 13s linear 0s;
             animation: spin 13s linear 0s;
-    z-index: -9999;
     position: fixed;
   }
 
@@ -140,7 +135,7 @@ ul li {
   }
 
   .sub-header {
-    background: #f6f6f6;
+    background: rgba(246, 246, 246, 0.938);
     text-align: center;
   }
   .sub-header h1 {
@@ -150,7 +145,7 @@ ul li {
   }
   .sub-header button {
     padding: 10px 15px;
-    background: linear-gradient(160deg, #fb3fa8 0%, #9e17bb 100%);
+    background: radial-gradient(ellipse at top, #fb3fa8 2%, #9e17bb 100%);
     color: #fff;
     border-radius: 50px;
     margin-bottom: 40px;
@@ -159,7 +154,7 @@ ul li {
     transform: scale(1.5);
     transition: 1500ms;
     rotate: 55%;
-    background: #fc71bf;
+    background: #c121e4;
   }
 
   /** Section fonctionnement **/
@@ -182,6 +177,9 @@ ul li {
     display: flex;
     flex-direction: column;
     text-align: center;
+    background-color: white;
+    margin: 0;
+    padding: 0;
   }
 
   .choice {
@@ -203,6 +201,18 @@ ul li {
     color: #fff;
   }
 
+  .choice:nth-child(2) {
+    background-color: rgba(211, 211, 211, 0.1);
+  }
+
+  .choice:nth-child(3) {
+    background-color: rgba(211, 211, 211, 0.1);
+  }
+
+  .choice:nth-child(4) {
+    background-color: rgba(176, 135, 226, 0.1);
+  }
+
   .function__step--title {
     margin-right: 2rem;
     font-weight: bold;
@@ -216,6 +226,10 @@ ul li {
 
   i.fas.fa-mobile-alt, i.fas.fa-list-ul {
     color: #7e7e7e;
+  }
+
+  .logo1 {
+    position: fixed;
   }
 
   .Resto {
@@ -233,258 +247,150 @@ ul li {
     position: relative;
     margin: 0;
   }
-
-  .resto {
-    height: auto;
-    margin: 0;
-  }
-
-  .Menu_restaurant {
-    width: 280px;
-    border-radius: 15px;
-    display: flex;
-    position: relative;
-    flex-direction: column;
-    box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.5);
-  }
-  .Menu_restaurant .restaurant__carte--carré {
-    border-radius: 3px;
-    background-color: #99e2d0;
-    color: #217460;
-    padding: 5px;
-    position: absolute;
-    top: 12px;
-    right: 10px;
-    z-index: 1;
-    transform: translate(-10%, 10%);
-    opacity: 1;
-  }
-
-  .img_menu {
-    width: 100%;
-    -o-object-fit: cover;
-       object-fit: cover;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-  }
-
-  .img_menu--enchantée {
-    height: 180px;
-  }
-
-  .img_restaurant {
-    width: 280px;
-    position: relative;
-    -o-object-fit: cover;
-       object-fit: cover;
-  }
-
-  .text_menu {
-    width: 280px;
-    flex-direction: column;
-    align-content: space-around;
-    padding: 10px 0 10px 10px;
-    background-color: #fff;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-  }
-  .text_menu h4 {
-    margin: 0;
-  }
-
-  .icones {
-    fill: transparent;
-    stroke: var(--pink);
-    stroke-width: 20;
-    cursor: pointer;
-    position: relative;
-  }
-  .icones svg {
-    overflow: visible;
-    width: 10rem;
-  }
-  .icones path {
-    stroke-dashoffset: 0;
-    stroke-dasharray: 1550;
-    transform-origin: center;
-  }
-  .icones .heart-background {
-    position: absolute;
-    left: 0;
-    right: 0;
-    z-index: -1;
-    stroke: none;
-  }
-  .icones .heart-main:hover path {
-    -webkit-animation: stroke-animation 2s ease-in-out forwards;
-            animation: stroke-animation 2s ease-in-out forwards;
-  }
-  .icones .heart-main:hover ~ .heart-background path {
-    -webkit-animation: fade-animation 2s ease-in-out forwards;
-            animation: fade-animation 2s ease-in-out forwards;
-  }
-
-  @-webkit-keyframes stroke-animation {
-    0% {
-      stroke-dashoffset: 0;
-    }
-    30% {
-      stroke-dashoffset: 1550;
-    }
-    60% {
-      stroke-dashoffset: 3100;
-      fill: transparent;
-      transform: scale(1);
-    }
-    80% {
-      fill: var(--pink);
-      transform: scale(1.1);
-    }
-    90% {
-      transform: scale(1);
-    }
-    100% {
-      stroke-dashoffset: 3100;
-      fill: var(--pink);
-    }
-  }
-
-  @keyframes stroke-animation {
-    0% {
-      stroke-dashoffset: 0;
-    }
-    30% {
-      stroke-dashoffset: 1550;
-    }
-    60% {
-      stroke-dashoffset: 3100;
-      fill: transparent;
-      transform: scale(1);
-    }
-    80% {
-      fill: var(--pink);
-      transform: scale(1.1);
-    }
-    90% {
-      transform: scale(1);
-    }
-    100% {
-      stroke-dashoffset: 3100;
-      fill: var(--pink);
-    }
-  }
-  @-webkit-keyframes fade-animation {
-    70% {
-      fill: transparent;
-      transform: scale(1);
-    }
-    80% {
-      fill: var(--pink-light);
-      transform: scale(1.1);
-      opacity: 1;
-    }
-    90% {
-      opacity: 1;
-    }
-    100% {
-      transform: scale(2.5);
-      opacity: 0;
-    }
-  }
-  @keyframes fade-animation {
-    70% {
-      fill: transparent;
-      transform: scale(1);
-    }
-    80% {
-      fill: var(--pink-light);
-      transform: scale(1.1);
-      opacity: 1;
-    }
-    90% {
-      opacity: 1;
-    }
-    100% {
-      transform: scale(2.5);
-      opacity: 0;
-    }
-  }
-  .Menus {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-around;
-    margin: 20px 5px;
-    border-radius: 0%;
-  }
-
-  .titre_restaurant {
-    text-align: center;
-    font-family: "Shrikhand";
-  }
-
-  article {
-    margin-bottom: 10px;
-    box-shadow: 0 0 16px #0000002e;
-    border-radius: 12px;
-  }
-
-  footer {
-    background-color: #353535;
-    font-family: "Roboto", sans-serif;
-  }
-  footer a {
-    color: #fff;
-  }
-  footer a .fa-utensils {
-    color: #fff;
-  }
-
-  .logo2 {
-    font-size: 8px;
-    font-family: "Shrikhand";
-    padding: 10px 0px 2px 5px;
-    color: white;
-  }
-
-  .fa-hands-helping {
-    color: #fff;
-  }
-
-  .logo2 {
-    color: #fff;
-  }
-
-  /*-----------MENUS LA PALETTE DU GOUT--------*/
-  /*----------Header-----------*/
-  .return {
-    position: absolute;
-    top: 2rem;
-    left: 2rem;
-    font-size: 25px;
-  }
-
-  .header__logo {
-    text-align: center;
-    font-family: "Shrikhand";
-    align-items: center;
-  }
-
-  .img_palette--height {
-    max-height: 300px;
-    -o-object-fit: cover;
-       object-fit: cover;
-  }
-
-  .img_palette {
-    width: 100%;
-    padding: 0;
-    margin: 0;
-  }
 }
+.resto {
+  height: auto;
+  margin: 0;
+}
+
+.Menu_restaurant {
+  width: 280px;
+  border-radius: 15px;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.5);
+  margin-bottom: 5px;
+  margin: auto;
+}
+.Menu_restaurant .restaurant__carte--carré {
+  border-radius: 3px;
+  background-color: #99e2d0;
+  color: #217460;
+  padding: 5px;
+  position: absolute;
+  top: 12px;
+  right: 10px;
+  z-index: 1;
+  transform: translate(-5%, 10%);
+  opacity: 1;
+}
+
+.img_menu {
+  width: 100%;
+  height: 150px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.img_menu--enchantée {
+  height: 150px;
+}
+
+.img_restaurant {
+  width: 280px;
+  position: relative;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.text_menu {
+  width: 280px;
+  flex-direction: column;
+  align-content: space-around;
+  padding: 15px 0 55px 15px;
+  background-color: #fff;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  margin: 0;
+  height: 55px;
+}
+.text_menu h4 {
+  margin: 0;
+}
+
+.far.far.fa-heart {
+  translate: 220px -32px;
+  font-size: 22px;
+  margin: 0;
+  padding: 0;
+}
+
+.titre_restaurant {
+  font-family: "Shrikhand";
+  padding-left: 45px;
+  padding-bottom: 15px;
+  font-size: 20px;
+}
+
+article {
+  margin-bottom: 10px;
+}
+
+footer {
+  background-color: #353535;
+  font-family: "Roboto", sans-serif;
+}
+footer a {
+  color: #fff;
+}
+footer a .fa-utensils {
+  color: #fff;
+}
+footer footer h1 {
+  font-size: 56px;
+}
+footer .logo__form {
+  font-family: "Shrikhand";
+}
+
+.logo2 {
+  font-size: 8px;
+  font-family: "Shrikhand";
+  padding: 10px 0px 2px 5px;
+  color: white;
+}
+
+.fa-hands-helping {
+  color: #fff;
+}
+
+.logo2 {
+  color: #fff;
+}
+
+/*-----------MENUS LA PALETTE DU GOUT--------*/
+/*----------Header-----------*/
+.return {
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
+  font-size: 25px;
+}
+
+.header__logo {
+  text-align: center;
+  font-family: "Shrikhand";
+  align-items: center;
+}
+
+.img_palette--height {
+  max-height: 300px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.img_palette {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
 /*-----------PAGE MENU---------*/
 .pagemenu {
   background-color: #f6f6f6;
-  padding: 8px;
 }
 
 .pagemenu__title {
@@ -666,18 +572,24 @@ ul li::before {
     font-size: 20px;
   }
 
-  .img_menu--enchantée {
+  .img_menu, .img_menu--enchantée {
     height: 240px;
   }
 
   .text_menu {
     width: 380px;
-    padding: 15px 15px;
-    font-size: 18px;
+    padding: 15px 15px 0px 15px;
+    font-size: 20px;
+    line-height: 22px;
+    height: 80px;
   }
 
   .far.fa-heart {
     bottom: 1.5rem;
+    translate: 320px -30px;
+    padding: 0;
+    margin: 0;
+    right: 150px;
   }
 
   footer * {
@@ -786,6 +698,11 @@ ul li::before {
     width: 400px;
   }
 
+  .titre_restaurant {
+    text-align: center;
+    font-size: 30px;
+  }
+
   .img_menu {
     width: 400px;
   }
@@ -795,6 +712,10 @@ ul li::before {
 
   .text_menu {
     width: 400px;
+  }
+
+  .fas.fa.far.fa-heart {
+    translate: 320% -30%;
   }
 
   .Menu_restaurant .restaurant__carte--carré {
@@ -906,6 +827,9 @@ ul li::before {
   }
   .search_button .btn:hover {
     transform: scale(1.13);
+  }
+  .search_button .heart-main {
+    display: none;
   }
 }
 /*# sourceMappingURL=styles.css.map *//*# sourceMappingURL=styles.css.map */
