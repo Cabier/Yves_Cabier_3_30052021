@@ -617,6 +617,11 @@ ul li::before {
     max-width: 360px;
   }
 
+  .titre_restaurant {
+    text-align: center;
+    font-size: 20px;
+  }
+
   .Menu_restaurant {
     width: 420px;
   }
@@ -632,13 +637,17 @@ ul li::before {
     width: 420px;
   }
 
-  footer * {
+  .far.fa-heart {
+    translate: 320px -32px;
+    font-size: 22px;
+  }
+  .far.fa-heart footer * {
     font-size: 24px;
     text-align: center;
     padding: auto;
   }
 }
-@media screen and (min-width: 801px) {
+@media screen and (min-width: 600px) and (min-width: 801px) {
   .function {
     align-items: center;
   }
@@ -679,11 +688,18 @@ ul li::before {
     width: 700px;
   }
 
+  .far.far.fa-heart {
+    translate: 600px -32px;
+    font-size: 22px;
+    margin: 0;
+    padding: 0;
+  }
+
   .Menu_restaurant .restaurant__carte--carré {
     transform: translate(280%, 10%);
   }
 }
-@media screen and (min-width: 1025px) {
+@media screen and (min-width: 600px) and (min-width: 1025px) {
   .sub-header h1 {
     font-size: 30px;
   }
@@ -721,8 +737,12 @@ ul li::before {
   .Menu_restaurant .restaurant__carte--carré {
     transform: translate(-30%, 10%);
   }
+
+  .Menus {
+    display: flex;
+  }
 }
-@media screen and (min-width: 1281px) {
+@media screen and (min-width: 600px) and (min-width: 1025px) and (min-width: 1281px) {
   .sub-header h4 {
     font-size: 45px;
   }
@@ -759,7 +779,7 @@ ul li::before {
     font-size: 20px;
   }
 }
-@media screen and (min-width: 1480px) {
+@media screen and (min-width: 600px) and (min-width: 1025px) and (min-width: 1480px) {
   footer {
     display: flex;
     padding-right: 15px;
