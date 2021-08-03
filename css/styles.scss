@@ -405,7 +405,7 @@ footer { margin: 0;}
 .pagemenu {
    
    background-color:#f6f6f6;
-   
+   padding: 0 8px;
 }
 .pagemenu__title {
    border-radius: 1.5rem 1.5rem 0 0;
@@ -508,7 +508,8 @@ line-height: 2px;
    }
 .subfooterbutton {
    text-align: center;
-   margin: 20px 0;
+   margin: 60px 0;
+
 }
 .button {
    padding: 15px 35px;
@@ -900,6 +901,7 @@ ul li::before{content: "\f4c4";font-family: fontawesome;color: #fff;margin-left:
             padding-right: 15px;
          }
          .logo2 {
+            display: flex;
             margin-left: 120px;
          }
          .lienfooter {
@@ -933,7 +935,10 @@ ul li::before{content: "\f4c4";font-family: fontawesome;color: #fff;margin-left:
                      font-size: 30px;
                   
          }  
-         
+         .titre_restaurant {
+            padding-left: 160px;
+            text-align: none;
+         }
          .Menu_restaurant {
                display: flex;
                flex-wrap: wrap;
@@ -958,6 +963,7 @@ ul li::before{content: "\f4c4";font-family: fontawesome;color: #fff;margin-left:
                    
                }
            }
+         } 
          .heart-main {
             display: none;
          }
@@ -967,7 +973,8 @@ ul li::before{content: "\f4c4";font-family: fontawesome;color: #fff;margin-left:
          .button {
             font-size: 25px;
          }
+         
       }
    }
    
-      }
+      
