@@ -557,6 +557,10 @@ ul li::before {
     font-size: 18px;
   }
 
+  .titre_restaurant {
+    text-align: center;
+  }
+
   .Menu_restaurant {
     width: 380px;
   }
@@ -586,7 +590,7 @@ ul li::before {
 
   .far.fa-heart {
     bottom: 1.5rem;
-    translate: 320px -30px;
+    transform: translate(320%, -30%);
     padding: 0;
     margin: 0;
     right: 150px;
@@ -638,16 +642,17 @@ ul li::before {
   }
 
   .far.fa-heart {
-    translate: 320px -32px;
+    transform: translate(630%, -30%);
     font-size: 22px;
   }
-  .far.fa-heart footer * {
+
+  footer * {
     font-size: 24px;
     text-align: center;
     padding: auto;
   }
 }
-@media screen and (min-width: 600px) and (min-width: 801px) {
+@media screen and (min-width: 801px) {
   .function {
     align-items: center;
   }
@@ -688,24 +693,50 @@ ul li::before {
     width: 700px;
   }
 
-  .far.far.fa-heart {
-    translate: 600px -32px;
+  .far.fa-heart {
+    transform: translate(1730%, -30%);
     font-size: 22px;
-    margin: 0;
-    padding: 0;
   }
 
   .Menu_restaurant .restaurant__carte--carré {
     transform: translate(280%, 10%);
   }
 }
-@media screen and (min-width: 600px) and (min-width: 1025px) {
+@media screen and (min-width: 1025px) {
   .sub-header h1 {
     font-size: 30px;
   }
 
   .sub-header p {
     font-size: 20px;
+  }
+
+  .function {
+    display: grid;
+    grid-template-areas: "fonction fonction fonction" "choice1  choice2  choice3";
+    grid-column-gap: 10px;
+  }
+
+  .choice:nth-child(2) {
+    grid-area: choice1;
+  }
+
+  .choice:nth-child(3) {
+    grid-area: choice2;
+  }
+
+  .choice:nth-child(4) {
+    grid-area: choice3;
+  }
+
+  .Resto {
+    background: #f6f6f6;
+    padding-top: 15px;
+  }
+
+  .Menus {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
   }
 
   .Menu_restaurant {
@@ -730,19 +761,16 @@ ul li::before {
     width: 400px;
   }
 
-  .fas.fa.far.fa-heart {
-    translate: 320% -30%;
+  .far.fa-heart {
+    transform: translate(480%, -30%);
+    font-size: 22px;
   }
 
   .Menu_restaurant .restaurant__carte--carré {
     transform: translate(-30%, 10%);
   }
-
-  .Menus {
-    display: flex;
-  }
 }
-@media screen and (min-width: 600px) and (min-width: 1025px) and (min-width: 1281px) {
+@media screen and (min-width: 1281px) {
   .sub-header h4 {
     font-size: 45px;
   }
@@ -779,7 +807,7 @@ ul li::before {
     font-size: 20px;
   }
 }
-@media screen and (min-width: 600px) and (min-width: 1025px) and (min-width: 1480px) {
+@media screen and (min-width: 1480px) {
   footer {
     display: flex;
     padding-right: 15px;
