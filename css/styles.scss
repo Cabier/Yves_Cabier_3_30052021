@@ -405,7 +405,7 @@ footer { margin: 0;}
 .pagemenu {
    
    background-color:#f6f6f6;
-   padding: 0 8px;
+   padding: 0;
 }
 .pagemenu__title {
    border-radius: 1.5rem 1.5rem 0 0;
@@ -771,13 +771,13 @@ ul li::before{content: "\f4c4";font-family: fontawesome;color: #fff;margin-left:
    
          .img_menu {
          width: 400px;
-      
+         }
             .img_menu--enchantée {
                width: 400px
             
                
             }
-         }  
+           
    
          .text_menu {
             width: 400px;
@@ -882,7 +882,7 @@ ul li::before{content: "\f4c4";font-family: fontawesome;color: #fff;margin-left:
          .pagemenu__title h1{
             font-size: 34px;
          }
-
+      }
       @media screen and (min-width:1480px) and (max-width:885px) {
          .function {
             display:grid;
@@ -892,6 +892,10 @@ ul li::before{content: "\f4c4";font-family: fontawesome;color: #fff;margin-left:
             grid-column-gap:30px; 
             grid-template-columns: 1000px 1000px 1000px;
          } 
+         .Menus {
+            display:grid ;
+            grid-template-columns: 25% 25% 25% 25%;
+         }
          .function {
             display: flex;
             flex-direction: row;
@@ -975,6 +979,5 @@ ul li::before{content: "\f4c4";font-family: fontawesome;color: #fff;margin-left:
          }
          
       }
-   }
-   
+     
       

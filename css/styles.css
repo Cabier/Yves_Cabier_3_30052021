@@ -401,7 +401,7 @@ footer .logo__form {
 /*-----------PAGE MENU---------*/
 .pagemenu {
   background-color: #f6f6f6;
-  padding: 0 8px;
+  padding: 0;
 }
 
 .pagemenu__title {
@@ -809,7 +809,8 @@ ul li::before {
   .img_menu {
     width: 400px;
   }
-  .img_menu .img_menu--enchantée {
+
+  .img_menu--enchantée {
     width: 400px;
   }
 
@@ -919,12 +920,17 @@ ul li::before {
     font-size: 34px;
   }
 }
-@media screen and (min-width: 1281px) and (min-width: 1480px) and (max-width: 885px) {
+@media screen and (min-width: 1480px) and (max-width: 885px) {
   .function {
     display: grid;
     grid-template-areas: "fonction fonction fonction" "choice1  choice2  choice3" "choice1  choice2  choice3";
     grid-column-gap: 30px;
     grid-template-columns: 1000px 1000px 1000px;
+  }
+
+  .Menus {
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
   }
 
   .function {
