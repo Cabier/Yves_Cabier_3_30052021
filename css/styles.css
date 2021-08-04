@@ -74,6 +74,7 @@ footer {
     position: relative;
     visibility: hidden;
     transition: visibility 3s;
+    background-position: center;
   }
 
   .loader {
@@ -231,13 +232,25 @@ footer {
   .choice:nth-child(2) {
     background-color: rgba(211, 211, 211, 0.1);
   }
+  .choice:nth-child(2):hover {
+    background: rgba(237, 237, 237, 0);
+    cursor: pointer;
+  }
 
   .choice:nth-child(3) {
     background-color: rgba(211, 211, 211, 0.1);
   }
+  .choice:nth-child(3):hover {
+    background: rgba(237, 237, 237, 0);
+    cursor: pointer;
+  }
 
   .choice:nth-child(4) {
     background-color: rgba(176, 135, 226, 0.1);
+  }
+  .choice:nth-child(4):hover {
+    background: rgba(203, 176, 236, 0.1);
+    cursor: pointer;
   }
 
   .function__step--title {

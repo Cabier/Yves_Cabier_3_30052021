@@ -50,6 +50,7 @@ footer { margin: 0;}
      position: relative;
      visibility: hidden;
      transition: visibility 3s;
+     background-position: center;
      
     
   }
@@ -203,14 +204,22 @@ footer { margin: 0;}
    }  
    .choice:nth-child(2) {
       background-color:rgb(211, 211, 211,0.1) ;   
+         &:hover{ background:lighten(rgb(211, 211, 211,0), $amount: 10);
+            cursor: pointer;
+      }
    }  
    .choice:nth-child(3) {
       background-color:rgb(211, 211, 211,0.1) ; 
+      &:hover{ background:lighten(rgb(211, 211, 211,0), $amount: 10);
+         cursor: pointer;
+   }
    }
    .choice:nth-child(4) {
       background-color: rgb(176, 135, 226,0.1);
+      &:hover{ background:lighten(rgb(176, 135, 226,0.1), $amount: 10);
+         cursor: pointer;
    }
-
+   }
       .function__step--title {
             margin-right: 2rem;
             font-weight: bold;
