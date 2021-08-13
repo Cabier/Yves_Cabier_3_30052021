@@ -59,6 +59,16 @@ footer {
   margin: 0;
 }
 
+.logoloader {
+  display: flex;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 9999;
+}
+
 .loader-wrapper {
   width: 100%;
   height: 100%;
@@ -86,6 +96,7 @@ footer {
           animation: spin 2s linear;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
+  z-index: 8000;
   top: 0;
   left: 0;
   right: 0;
@@ -1222,47 +1233,6 @@ ul li::before {
     grid-template-areas: "fonction fonction fonction" "choice1  choice2  choice3" "choice1  choice2  choice3";
     grid-column-gap: auto;
     padding-right: 20px;
-  }
-
-  footer {
-    display: flex;
-    padding-right: 15px;
-  }
-
-  .logo2 {
-    display: flex;
-    margin-left: 120px;
-  }
-
-  .lienfooter {
-    display: flex;
-    padding-left: 120px;
-    flex-direction: row;
-  }
-
-  .proposition {
-    padding-left: 20px;
-  }
-
-  .pro {
-    padding-left: 25px;
-  }
-
-  .dev {
-    padding-left: 25px;
-  }
-
-  .mention {
-    padding-left: 25px;
-  }
-
-  .contact {
-    padding-left: 25px;
-  }
-
-  .lien2 {
-    display: flex;
-    justify-content: space-around;
   }
 
   .pagemenu {
