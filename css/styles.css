@@ -294,9 +294,6 @@ footer {
     margin-bottom: 40px;
   }
   .sub-header button:hover {
-    transform: scale(1.5);
-    transition: 1500ms;
-    rotate: 55%;
     background: #c121e4;
   }
 
@@ -464,9 +461,18 @@ footer {
   height: 55px;
   line-height: 20px;
 }
-.text_menu h4 {
+.text_menu h3 {
   margin: 0;
   padding: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.text_menu p {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .selections {
@@ -679,7 +685,7 @@ footer .logo__form {
 /*----------Header-----------*/
 .return {
   position: absolute;
-  top: 2rem;
+  top: 1.8rem;
   left: 2rem;
   font-size: 25px;
 }
@@ -687,7 +693,7 @@ footer .logo__form {
 .header__logo {
   text-align: center;
   font-family: "Shrikhand";
-  align-items: center;
+  padding: 1;
 }
 
 .img_palette--height {
@@ -762,6 +768,18 @@ footer .logo__form {
   overflow: hidden;
   padding: 0;
 }
+.menu__entrées::after {
+  content: "";
+  font-family: FontAwesome;
+  font-weight: normal;
+  font-style: normal;
+  text-decoration: none;
+  background: #217460;
+  height: 100%;
+  width: 100px;
+  text-align: center;
+  align-items: center;
+}
 
 .menu__entrées > h3 {
   overflow: hidden;
@@ -779,25 +797,10 @@ footer .logo__form {
 
 .menu__animation :hover .fas.fa-check-circle {
   -webkit-animation: slide-left 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+          animation: slide-left 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
   animation: slide-left 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
 
-@-webkit-keyframes slide-left {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-100px);
-  }
-}
-@keyframes slide-left {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-100px);
-  }
-}
 .entrées__met {
   padding: 5px 0;
   line-height: 2px;
@@ -817,6 +820,19 @@ footer .logo__form {
   flex-direction: row;
   align-items: center;
   overflow: hidden;
+  padding: 0;
+}
+.menu__plats::after {
+  content: "";
+  font-family: FontAwesome;
+  font-weight: normal;
+  font-style: normal;
+  text-decoration: none;
+  background: #217460;
+  height: 100%;
+  width: 100px;
+  text-align: center;
+  align-items: center;
 }
 
 .subfooterbutton {
