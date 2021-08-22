@@ -30,9 +30,9 @@ html {
    margin: 0;
    padding: 0;
 }
-body { margin: 0;
+body { 
+   margin: 0;
    padding: 0;
-   min-height: 180vh;
    position: relative;
   
 }
@@ -57,7 +57,7 @@ footer {
 }
 .loader-wrapper {
       width: 100%;
-      height:100%;
+      height:100vh;
       background: rgba (255,255,255,0.8);
       z-index:100;
       position:absolute;
@@ -65,7 +65,9 @@ footer {
       align-items: center;
       animation: hide 2s linear ;
       animation-fill-mode:forwards ;
-      
+      display: flex;
+      justify-content: center;
+      align-items: center;
       
    }
    .loader {
@@ -110,14 +112,15 @@ footer {
   }
   @keyframes bodies {
      0% {
-        opacity: 0;
-        
-        
-        
+        opacity: 0.99;
+         height: 0px;
+         display: block;
      }
      100% {
         opacity: 1;
         visibility: visible;
+        height: auto;
+        display: block;
         
         
      }
@@ -133,6 +136,9 @@ footer {
       visibility: hidden;
       margin: 0;
       padding: 0;
+      height: 0px;
+      // display: none;
+      overflow: hidden;
    }
    .menu__entrées {
     animation-name: slidedown; 
@@ -184,6 +190,7 @@ footer {
       to{
          transform: translateY(0);
          opacity: 1;
+         
       }
    }
 /*----------PARTIE MOBILES IPHONES -----------*/
@@ -402,38 +409,39 @@ display: flex;
    }
 
    .img_restaurant {
-   width: auto;
-   position: relative;
-   object-fit: cover;
+      width: auto;
+      position: relative;
+      object-fit: cover;
    
    }
    
    .text_menu {
       width: auto;
       padding-left: 10px;
-   
-      
-      
-   
       background-color: #fff;
       border-bottom-left-radius: 10px;
       border-bottom-right-radius: 10px;
       margin:0 ;
-      
-      line-height: 2px;
-   
-   }
-   
+      display: flex;
+      flex-direction: column;
+      height: 70px;
+      justify-content: space-around;
+      padding: 10px 0;
 
+   }
+   .text_menu h4, .text_menu div {
+      height: 20px;
+      font-size: 20px;
+      margin: 0px;
+      display: flex;
+      margin: 0;
+      align-items: center;
+   }
    .icon {
-   
-   left:265px;
+      left:265px;
       position: absolute;
       bottom: 28px;
       white-space: nowrap;
-      
-   
-      
    }
    @keyframes stroke-animation {
    0% {
@@ -466,7 +474,6 @@ display: flex;
    
    stroke-width: 20;
    cursor: pointer;
-   position: relative;
    
    
    }
@@ -529,7 +536,6 @@ fill: transparent;
 stroke: pink;
 stroke-width: 20;
 cursor: pointer;
-position: relative;
 
 
 }
@@ -627,6 +633,10 @@ animation: stroke-animation 2s ease-in-out forwards;
    font-family: $font-familyS;
    height: 60px;
    padding: 1;
+   color: purple;
+}
+.fa-arrow-left {
+   color: purple;
 }
 .return {
    position: absolute;
@@ -759,6 +769,7 @@ align-items: center;
    white-space: nowrap;
    text-overflow: ellipsis;
    overflow: hidden;
+   margin: 0;
 }
 .entrées__met p {
    font-size: 15px;
@@ -780,9 +791,9 @@ align-items: center;
    justify-content: flex-end;
    margin-right: 0;
    transition: all 0.8s ease-in-out 0s;
-   padding: 20px;
+   padding: 20px 20px 0 10px;
 }
-.menu__animation :hover{
+.menu__animation:hover{
    .fas.fa-check-circle  {
       animation:slide-left .5s cubic-bezier(.25,.46,.45,.94) both;animation:slide-left .5s cubic-bezier(.25,.46,.45,.94) both
    }   
@@ -811,7 +822,7 @@ p {
 
 .menu__plats {
 background-color: #fff;
-   height: 80px;
+   
    cursor: pointer;
    margin: 15px 0;
    padding: 20px 0 25px 15px;
@@ -824,7 +835,9 @@ background-color: #fff;
    overflow: hidden;
    padding: 0;
    white-space: nowrap;
-
+   h3 {
+      margin: 0;
+   }
 }
 
 .subfooterbutton {
@@ -1216,7 +1229,7 @@ ul li::before{content: "\f4c4";font-family: fontawesome;color: #fff;margin-left:
             font-size: 34px;
          }
       }
-      @media screen and (min-width:1480px)  {
+      @media screen and (min-width:1480px) and (max-width:1281px) {
          .function {
             display:grid;
             grid-template-areas:"fonction fonction fonction"
@@ -1251,7 +1264,7 @@ ul li::before{content: "\f4c4";font-family: fontawesome;color: #fff;margin-left:
                   }
          }
          .Menu_restaurant.restaurant__carte--carré {
-                  transform: translate(230%,10%);  
+                  transform: translate(430%,10%);  
                   }
       
          .search_button {
