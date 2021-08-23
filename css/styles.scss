@@ -184,8 +184,8 @@ footer {
    }
    @keyframes slidedown {
       from {
-         transform: translateY(-50%);
-         opacity: 0;
+         transform: translateY(50%);
+         opacity: 0,5;
       }   
       to{
          transform: translateY(0);
@@ -368,6 +368,9 @@ display: flex;
       height: auto;
       margin: 0;
    }
+   .text_menu h4, .text_menu div {
+      padding-left: 10px;
+   }
    .titre_restaurant {
       text-align: left;
    
@@ -397,7 +400,7 @@ display: flex;
    }
    .img_menu {
       width: 100%;
-      height: 150px;
+      height: 200px;
       object-fit: cover;
       border-top-left-radius:10px;
       border-top-right-radius: 10px;
@@ -405,7 +408,7 @@ display: flex;
       
       }
    .img_menu--enchantée {
-      height:150px;
+      height:200px;
    }
 
    .img_restaurant {
@@ -627,7 +630,10 @@ animation: stroke-animation 2s ease-in-out forwards;
    
    
    /*----------Header-----------*/
-
+.logomenus {
+   
+   padding-top: 12px;
+}
 .header__logo{ 
    text-align: center;
    font-family: $font-familyS;
@@ -658,6 +664,10 @@ animation: stroke-animation 2s ease-in-out forwards;
 .pagemenu__title  {
 position: relative;
 padding-left: 10px;
+margin-top: -2rem;
+border-top-left-radius: 25px;
+border-top-right-radius: 25px;
+background-color:#f6f6f6;
 }
 
 /*-----------PAGE MENU---------*/
@@ -675,6 +685,15 @@ padding: 0 5px 0 5px;
 .pagemenu__title {
 display: flex;
 justify-content: space-between;
+   .icon {
+      
+      align-items: right;
+      text-align: right;
+      right: 10px;
+      top:20px;
+   }
+ 
+
 }
 .menu__icon {
 align-self: center;
@@ -688,7 +707,7 @@ bottom: 0.5em;
 
 .menu__title {
 color: red;
-padding:3rem 0 0.5rem ;
+padding:1.5rem 0 0.5rem ;
 font-size: 1rem;
 }
 .menu__underline {
@@ -1142,7 +1161,7 @@ ul li::before{content: "\f4c4";font-family: fontawesome;color: #fff;margin-left:
          .menu__entrées,.menu__plats {
             min-width: 600px;
             max-width: 600px;
-            height: 100px;
+            
             
             
          }
@@ -1208,7 +1227,7 @@ ul li::before{content: "\f4c4";font-family: fontawesome;color: #fff;margin-left:
          .menu__entrées,.menu__plats {
             min-width: 700px;
             max-width: 700px;
-            height: 120px;
+            
             
             
          }
@@ -1217,7 +1236,7 @@ ul li::before{content: "\f4c4";font-family: fontawesome;color: #fff;margin-left:
          }
          
          .menu__price {
-            font-size:28px ;
+            font-size:18px ;
          }
          .menu__title {
             font-size: 28px;
@@ -1274,6 +1293,26 @@ ul li::before{content: "\f4c4";font-family: fontawesome;color: #fff;margin-left:
               
             }
          }
-      
-   
-           
+      @media  screen and (max-width:2185px) and (min-width:1133px) {
+         .Menu_restaurant {
+            width: 80%;
+         }
+         .img_restaurant {
+            width:100%;
+         }   
+         .img_menu  {
+            width:100%;
+         } 
+         .text_menu {
+            width:100% ;
+            .icon{
+            text-align:right;
+            display: flex;
+            justify-content: flex-end;
+            right: 30px;
+            }
+         }
+         .Menu_restaurant .restaurant__carte--carré {
+            transform:none;
+         }
+      }  
