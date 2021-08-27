@@ -291,7 +291,7 @@ display: flex;
    display: flex;
    justify-content:flex-start;
    margin: 20px;
-   box-shadow: 3px 3px 10px #dedada;
+   box-shadow: 3px 3px 10px rgba(222, 218, 218,0.5);
    border-radius: 1rem;
    padding: 15px;
    align-items: center;
@@ -309,20 +309,26 @@ display: flex;
 }  
 .choice:nth-child(2) {
    background-color:rgb(211, 211, 211,0.1) ;   
-      &:hover{ background:lighten(rgb(211, 211, 211,0), $amount: 10);
+      &:hover{ 
+         background:lighten(rgb(211, 211, 211,0), $amount: 10);
          cursor: pointer;
+         box-shadow: 3px 3px 10px rgba(222, 218, 218,1.5) ;
    }
 }  
 .choice:nth-child(3) {
    background-color:rgb(211, 211, 211,0.1) ; 
-   &:hover{ background:lighten(rgb(211, 211, 211,0), $amount: 10);
+      &:hover{ 
+      background:lighten(rgb(211, 211, 211,0), $amount: 10);
+      box-shadow:darken($color:#dedada, $amount: 10) ;
       cursor: pointer;
+      box-shadow: 3px 3px 10px rgba(222, 218, 218,1.5)
 }
 }
 .choice:nth-child(4) {
    background-color: rgb(176, 135, 226,0.1);
    &:hover{ background:lighten(rgb(176, 135, 226,0.1), $amount: 10);
       cursor: pointer;
+      box-shadow: 3px 3px 10px rgba(222, 218, 218,1.5)
 }
 }
    .function__step--title {
@@ -449,78 +455,19 @@ display: flex;
       bottom: 28px;
       white-space: nowrap;
    }
-   @keyframes stroke-animation {
-   0% {
-      stroke-dashoffset: 0;
-   }
-   30% {
-      stroke-dashoffset: 1550;
-   }
-   60% {
-      stroke-dashoffset: 3100;
-      transform-origin: bottom;
-      transform: scale(1);
-   }
-   80% {
-      fill: var(--pink);
-      transform: scale(1.1);
-   }
-   90% {
-      transform: scale(1);
-   }
-   100% {
-      stroke-dashoffset: 3100;
-      fill: var(--pink);
-      stroke : transparent;
-   }
-   }
    
-   .icon {
-   fill: transparent;
-   
-   stroke-width: 20;
-   cursor: pointer;
-   
-   
-   }
-   svg {
-   overflow: visible;
-   width: 3rem;
-   }
-   
-   path {
-   stroke-dashoffset: 0;
-   stroke-dasharray: 1550;
-   transform-origin: center;
-   }
-   
-   .heart-background {
-   position: absolute;
-   left: 0;
-   right: 0;
-   z-index: -1;
-   stroke: none;
-   }
-   .heart-main:hover path {
-   animation: stroke-animation 2s ease-in-out forwards;
-}
-
-
-
-.button {
-font-size: 25px;
-}
 
 @keyframes stroke-animation {
    0% {
 stroke-dashoffset: 0;
+transform-origin: bottom;
 }
 30% {
-stroke-dashoffset: 1550;
+
 }
 60% {
-stroke-dashoffset: 3100;
-transform-origin: bottom;
+
+
 transform: scale(1);
 }
 80% {
@@ -531,7 +478,6 @@ transform: scale(1);
 transform: scale(1);
 }
 100% {
-stroke-dashoffset: 3100;
 fill: var(--pink);
 stroke : transparent;
 }
