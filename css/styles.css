@@ -202,6 +202,9 @@ footer {
           animation-name: slidedown;
   -webkit-animation-duration: 2s;
           animation-duration: 2s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  opacity: 0;
 }
 
 .menu__entrées--1 {
@@ -1131,7 +1134,7 @@ ul li::before {
     display: grid;
     grid-template-areas: "fonction fonction fonction" "choice1  choice2  choice3" "choice1  choice2  choice3";
     grid-column-gap: 10px;
-    grid-template-columns: 33% 33% 33%;
+    grid-template-columns: 32% 32% 32%;
   }
 
   .choice {
@@ -1364,6 +1367,7 @@ ul li::before {
     font-size: 34px;
   }
 }
+/*******************1281*********************/
 @media screen and (min-width: 1480px) and (max-width: 1281px) {
   .function {
     display: grid;

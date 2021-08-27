@@ -149,6 +149,8 @@ footer {
    .menu__plats {
       animation-name: slidedown; 
       animation-duration: 2s;    
+      animation-fill-mode: forwards;
+       opacity: 0;
    }
    .menu__entrées--1 {
       animation-delay: 0.3s;
@@ -1029,7 +1031,7 @@ ul li::before{content: "\f4c4";font-family: fontawesome;color: #fff;margin-left:
                               "choice1  choice2  choice3"
                               "choice1  choice2  choice3";
          grid-column-gap:10px; 
-         grid-template-columns: 33% 33% 33%; 
+         grid-template-columns: 32% 32% 32%; 
       
       }
       .choice {
@@ -1250,6 +1252,7 @@ ul li::before{content: "\f4c4";font-family: fontawesome;color: #fff;margin-left:
             font-size: 34px;
          }
       }
+      /*******************1281*********************/
       @media screen and (min-width:1480px) and (max-width:1281px) {
          .function {
             display:grid;
