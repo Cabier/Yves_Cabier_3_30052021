@@ -697,14 +697,13 @@ footer .logo__form {
   font-size: 8px;
   font-family: "Shrikhand";
   padding: 10px 0px 2px 5px;
+}
+.logo2 h1 {
   color: white;
+  font-family: "Shrikhand";
 }
 
 .fa-hands-helping {
-  color: #fff;
-}
-
-.logo2 {
   color: #fff;
 }
 
@@ -761,7 +760,7 @@ footer .logo__form {
 }
 
 h1 {
-  font-size: 24px;
+  font-size: 20px;
   font-weight: bold;
 }
 
@@ -774,6 +773,10 @@ h1 {
   text-align: right;
   right: 10px;
   top: 20px;
+}
+
+.pagemenu__title h1 {
+  font-family: "Shrikhand";
 }
 
 .menu__icon {
@@ -796,6 +799,11 @@ h1 {
 .menu__underline {
   width: 2.5rem;
   border-top: 3px solid #99e2d0;
+}
+
+.container__1.container__2.container__3 {
+  padding: 0;
+  margin: 0;
 }
 
 /*---------PLATS---------*/
@@ -823,7 +831,7 @@ h1 {
   font-weight: normal;
   font-style: normal;
   text-decoration: none;
-  background: #217460;
+  background: #99E2D0;
   height: 100%;
   width: 100px;
   right: -100px;
@@ -833,6 +841,7 @@ h1 {
   text-align: center;
   position: absolute;
   transition: all 0.8s ease-in-out 0s;
+  color: #fff;
 }
 
 .fas.fa-check-circle {
@@ -1043,12 +1052,6 @@ ul li::before {
   .text_menu .icon {
     left: 300px;
   }
-
-  footer * {
-    font-size: 20px;
-    text-align: center;
-    padding: auto;
-  }
 }
 @media screen and (min-width: 600px) {
   .loader {
@@ -1097,12 +1100,6 @@ ul li::before {
   }
   .text_menu .icon {
     left: 350px;
-  }
-
-  footer * {
-    font-size: 24px;
-    text-align: center;
-    padding: auto;
   }
 }
 @media screen and (min-width: 801px) {
@@ -1201,10 +1198,6 @@ ul li::before {
     height: 320px;
   }
 
-  .sub-header h1 {
-    font-size: 30px;
-  }
-
   .sub-header p {
     font-size: 20px;
   }
@@ -1273,13 +1266,12 @@ ul li::before {
 
   .pagemenu {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    justify-content: space-around;
   }
 
   .menu__entrées, .menu__plats {
-    min-width: 600px;
-    max-width: 600px;
+    min-width: 300px;
+    max-width: 300px;
   }
 
   .entrées__met {
@@ -1342,8 +1334,8 @@ ul li::before {
   }
 
   .menu__entrées, .menu__plats {
-    min-width: 700px;
-    max-width: 700px;
+    min-width: 400px;
+    max-width: 400px;
   }
 
   .entrées__met {
@@ -1363,7 +1355,7 @@ ul li::before {
   }
 
   .pagemenu__title h1 {
-    font-size: 34px;
+    font-size: 26px;
   }
 }
 /*******************1281*********************/

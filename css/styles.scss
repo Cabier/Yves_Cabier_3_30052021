@@ -617,15 +617,17 @@ animation: stroke-animation 2s ease-in-out forwards;
       font-size: 8px;
       font-family:$font-familyS;
       padding:10px 0px 2px 5px;
+      
+      h1 {
       color:white;
+      font-family:$font-familyS;
+      }
    }   
    .fa-hands-helping {
    color: #fff;
 }
 
-.logo2 {
-      color: #fff;
-}
+
 
 
    /*-----------MENUS pages--------*/
@@ -682,21 +684,27 @@ padding: 0 5px 0 5px;
 
 
    h1 {
-      font-size: 24px;
+      font-size: 20px;
       font-weight: bold;
+      
    }
 .pagemenu__title {
 display: flex;
 justify-content: space-between;
-   .icon {
+   
+      .icon {
       
       align-items: right;
       text-align: right;
       right: 10px;
       top:20px;
+      }
    }
- 
 
+.pagemenu__title h1 {
+   
+      font-family:$font-familyS;
+   
 }
 .menu__icon {
 align-self: center;
@@ -716,6 +724,10 @@ font-size: 1rem;
 .menu__underline {
 width: 2.5rem;
 border-top: 3px solid #99e2d0;
+}
+.container__1.container__2.container__3 {
+   padding: 0;
+   margin: 0;
 }
 
 /*---------PLATS---------*/
@@ -745,7 +757,7 @@ align-items: center;
    font-weight: normal;
    font-style: normal;
    text-decoration: none;
-   background: #217460;
+   background: #99E2D0;
    height: 100%; 
    width: 100px;
    right: -100px;
@@ -755,6 +767,7 @@ align-items: center;
    text-align: center;
    position: absolute;
    transition: all 0.8s ease-in-out 0s;
+   color:#fff ;
 }
 .fas.fa-check-circle {
    font-size: 25px;
@@ -902,6 +915,7 @@ ul li::before{content: "\f4c4";font-family: fontawesome;color: #fff;margin-left:
 .lien2 {
    padding-left: 20px;
 }
+
 @media screen and (min-width:480px) {
    .loader {
       width: 200px;
@@ -953,11 +967,6 @@ ul li::before{content: "\f4c4";font-family: fontawesome;color: #fff;margin-left:
    
    
 
-   footer * {
-    font-size: 20px;
-    text-align: center;
-    padding: auto;
-   }
 }
    @media screen and (min-width:600px) {
       .loader {
@@ -1000,11 +1009,7 @@ ul li::before{content: "\f4c4";font-family: fontawesome;color: #fff;margin-left:
             }
       }
       
-      footer * {
-         font-size: 24px;
-         text-align: center;
-         padding: auto;
-      }
+      
    }
    @media screen and (min-width:801px) {
       .loader {
@@ -1089,9 +1094,7 @@ ul li::before{content: "\f4c4";font-family: fontawesome;color: #fff;margin-left:
             height:320px;
          }
       }
-      .sub-header h1 {
-         font-size: 30px;
-      }
+      
       .sub-header p {
          font-size: 20px;
       }
@@ -1159,12 +1162,12 @@ ul li::before{content: "\f4c4";font-family: fontawesome;color: #fff;margin-left:
          } 
          .pagemenu {
             display: flex;
-            flex-direction: column;
-            align-items: center;
+            justify-content: space-around;
+            
          }
          .menu__entrées,.menu__plats {
-            min-width: 600px;
-            max-width: 600px;
+            min-width: 300px;
+            max-width: 300px;
             
             
             
@@ -1229,8 +1232,8 @@ ul li::before{content: "\f4c4";font-family: fontawesome;color: #fff;margin-left:
             font-size: 20px;
          } 
          .menu__entrées,.menu__plats {
-            min-width: 700px;
-            max-width: 700px;
+            min-width: 400px;
+            max-width: 400px;
             
             
             
@@ -1249,7 +1252,7 @@ ul li::before{content: "\f4c4";font-family: fontawesome;color: #fff;margin-left:
             font-size: 25px;
          }
          .pagemenu__title h1{
-            font-size: 34px;
+            font-size: 26px;
          }
       }
       /*******************1281*********************/
