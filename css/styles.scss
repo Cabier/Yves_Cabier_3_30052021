@@ -1,14 +1,13 @@
 @import './_variables';
-@import './_mixins';
-@import './_placeholders';
 @import './_responsive';
 @import './breakpoints';
 
 * {
    box-sizing:border-box;
    font-family: $font-familyR;
-   --pink: rgb(146, 86, 220);
+   
 }
+
 
 a {
     text-decoration: none;
@@ -240,14 +239,18 @@ text-align: center;
    padding: 1rem 2.5rem;
    font-size: 25px;
    }
-
+   
+   
    button {
    padding: 10px 15px;
    
-   background: radial-gradient(ellipse at top, rgba(251,63,168,1) 2%, rgba(158,23,187,1) 100%); 
+   background: radial-gradient(ellipse at top, rgba(146,86,220,) 27%,rgb(255, 121, 218)  79%);
+   
+   
    color: #fff;
    border-radius: 50px;
    margin-bottom: 40px;
+   
       &:hover {
          
          background: lighten(rgba(158,23,187,1), $amount: 10);
@@ -454,63 +457,123 @@ display: flex;
       position: absolute;
       bottom: 28px;
       white-space: nowrap;
+      stroke-width: 20px;
+      &:hover {
+         
+         animation-delay: 1s;
+         animation: trans-icon 2s ease-in-out forwards;
+      }
    }
-   
+@keyframes trans-icon {
+   0% {
+
+   }
+   25% {
+      stroke-width:10px;
+   }
+   50% {
+      stroke-width: 0;
+   }
+   100% {
+      stroke-width: 0;
+   }
+}  
 
 @keyframes stroke-animation {
    0% {
-stroke-dashoffset: 0;
+stroke-dashoffset: 1000;
 transform-origin: bottom;
-}
+
+
+   }
 30% {
 
 }
 60% {
 
+stroke :transparent;   
 
 transform: scale(1);
 }
 80% {
-fill: var(--pink);
 transform: scale(1);
 }
 90% {
 transform: scale(1);
 }
 100% {
-fill: var(--pink);
-stroke : transparent;
+   stroke :transparent;    
+
+
+
 }
 }
 
-.icon {
-fill: transparent;
-stroke: pink;
-stroke-width: 20;
+.icon heart-main {
+
+fill:transparent;
+
 cursor: pointer;
 
 
 }
+
+
 svg {
 overflow: visible;
 width: 3rem;
 }
 
 path {
-stroke-dashoffset: 0;
-stroke-dasharray: 1550;
+
 transform-origin: center;
 }
 
-.heart-background {
-position: absolute;
-left: 0;
-right: 0;
-z-index: -1;
-stroke: none;
+
+.heart-main:hover {
+animation: stroke-animation 1s ease-in-out forwards;
+
+
 }
-.heart-main:hover path {
-animation: stroke-animation 2s ease-in-out forwards;
+
+.heart-full {
+   position: absolute;
+   right:0;
+   opacity:0;
+  
+}
+.heart-full:hover {
+animation: fadeanimation 2s ease-in-out forwards;
+animation-delay: 0.5s;
+stroke: transparent;  
+}
+
+@keyframes fadeanimation {
+0% {
+stroke: transparent;   
+
+  
+}
+30% {
+
+}
+60% {
+    
+opacity:1; 
+stroke:transparent;
+transform: scale(1);
+
+}
+80% {
+transform: scale(1);
+}
+90% {
+transform: scale(1);
+}
+100% {
+opacity: 1;
+stroke:transparent;
+}
 }
 
    .Resto {
@@ -593,7 +656,7 @@ animation: stroke-animation 2s ease-in-out forwards;
    color: purple;
 }
 .fa-arrow-left {
-   color: purple;
+   color: black;
 }
 .return {
    position: absolute;
@@ -663,7 +726,7 @@ bottom: 0.5em;
 }
 
 .menu__title {
-color: red;
+
 padding:1.5rem 0 0.5rem ;
 font-size: 1rem;
 }

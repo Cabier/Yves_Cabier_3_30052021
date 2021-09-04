@@ -20,7 +20,6 @@
 * {
   box-sizing: border-box;
   font-family: "Roboto", sans-serif;
-  --pink: rgb(146, 86, 220);
 }
 
 a {
@@ -319,7 +318,7 @@ footer {
 }
 .sub-header button {
   padding: 10px 15px;
-  background: radial-gradient(ellipse at top, #fb3fa8 2%, #9e17bb 100%);
+  background: radial-gradient(ellipse at top, #9256dc 27%, #ff79da 79%);
   color: #fff;
   border-radius: 50px;
   margin-bottom: 40px;
@@ -521,53 +520,78 @@ i.fas.fa-mobile-alt, i.fas.fa-list-ul {
   position: absolute;
   bottom: 28px;
   white-space: nowrap;
+  stroke-width: 20px;
+}
+.icon:hover {
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+  -webkit-animation: trans-icon 2s ease-in-out forwards;
+          animation: trans-icon 2s ease-in-out forwards;
 }
 
+@-webkit-keyframes trans-icon {
+  25% {
+    stroke-width: 10px;
+  }
+  50% {
+    stroke-width: 0;
+  }
+  100% {
+    stroke-width: 0;
+  }
+}
+
+@keyframes trans-icon {
+  25% {
+    stroke-width: 10px;
+  }
+  50% {
+    stroke-width: 0;
+  }
+  100% {
+    stroke-width: 0;
+  }
+}
 @-webkit-keyframes stroke-animation {
   0% {
-    stroke-dashoffset: 0;
+    stroke-dashoffset: 1000;
     transform-origin: bottom;
   }
   60% {
+    stroke: transparent;
     transform: scale(1);
   }
   80% {
-    fill: var(--pink);
     transform: scale(1);
   }
   90% {
     transform: scale(1);
   }
   100% {
-    fill: var(--pink);
     stroke: transparent;
   }
 }
-
 @keyframes stroke-animation {
   0% {
-    stroke-dashoffset: 0;
+    stroke-dashoffset: 1000;
     transform-origin: bottom;
   }
   60% {
+    stroke: transparent;
     transform: scale(1);
   }
   80% {
-    fill: var(--pink);
     transform: scale(1);
   }
   90% {
     transform: scale(1);
   }
   100% {
-    fill: var(--pink);
     stroke: transparent;
   }
 }
-.icon {
+.icon heart-main {
   fill: transparent;
-  stroke: pink;
-  stroke-width: 20;
   cursor: pointer;
 }
 
@@ -577,24 +601,69 @@ svg {
 }
 
 path {
-  stroke-dashoffset: 0;
-  stroke-dasharray: 1550;
   transform-origin: center;
 }
 
-.heart-background {
+.heart-main:hover {
+  -webkit-animation: stroke-animation 1s ease-in-out forwards;
+          animation: stroke-animation 1s ease-in-out forwards;
+}
+
+.heart-full {
   position: absolute;
-  left: 0;
   right: 0;
-  z-index: -1;
-  stroke: none;
+  opacity: 0;
 }
 
-.heart-main:hover path {
-  -webkit-animation: stroke-animation 2s ease-in-out forwards;
-          animation: stroke-animation 2s ease-in-out forwards;
+.heart-full:hover {
+  -webkit-animation: fadeanimation 2s ease-in-out forwards;
+          animation: fadeanimation 2s ease-in-out forwards;
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+  stroke: transparent;
 }
 
+@-webkit-keyframes fadeanimation {
+  0% {
+    stroke: transparent;
+  }
+  60% {
+    opacity: 1;
+    stroke: transparent;
+    transform: scale(1);
+  }
+  80% {
+    transform: scale(1);
+  }
+  90% {
+    transform: scale(1);
+  }
+  100% {
+    opacity: 1;
+    stroke: transparent;
+  }
+}
+
+@keyframes fadeanimation {
+  0% {
+    stroke: transparent;
+  }
+  60% {
+    opacity: 1;
+    stroke: transparent;
+    transform: scale(1);
+  }
+  80% {
+    transform: scale(1);
+  }
+  90% {
+    transform: scale(1);
+  }
+  100% {
+    opacity: 1;
+    stroke: transparent;
+  }
+}
 .Resto {
   background: #f2f2f2;
   padding-top: 45px;
@@ -657,7 +726,7 @@ footer .logo__form {
 }
 
 .fa-arrow-left {
-  color: purple;
+  color: black;
 }
 
 .return {
@@ -726,7 +795,6 @@ h1 {
 }
 
 .menu__title {
-  color: red;
   padding: 1.5rem 0 0.5rem;
   font-size: 1rem;
 }
