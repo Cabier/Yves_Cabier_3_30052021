@@ -317,17 +317,21 @@ footer {
   font-size: 25px;
 }
 .sub-header button {
-  padding: 10px 15px;
-  background: radial-gradient(ellipse at top, #9256dc 27%, #ff79da 79%);
+  padding: 13px 15px;
+  box-shadow: 2px 2px 2px 2px #dedada;
+  background: #e179f2;
+  background: linear-gradient(180deg, #e179f2 9%, #ca79ff 49%);
   color: #fff;
   border-radius: 50px;
   margin-bottom: 40px;
+  border: none;
 }
 .sub-header button:hover {
-  background: #c121e4;
+  background: linear-gradient(180deg, rgba(225, 121, 242, 0.9) 9%, rgba(202, 121, 255, 0.9) 49%);
+  box-shadow: #aea4a4;
 }
 
-/** Section fonctionnement **/
+/** background: lighten(rgba(225,121,242,1), $amount: 10);Section fonctionnement **/
 .block_number {
   color: #fff;
   background-color: #9356dc;
@@ -430,16 +434,15 @@ i.fas.fa-mobile-alt, i.fas.fa-list-ul {
   display: flex;
   flex-direction: column;
   width: auto;
-  padding: 0 0 40px 0px;
+  padding: 10 5 10px 5px;
   background-color: #f2f2f2;
   border-radius: 0;
   position: relative;
   margin: 0;
 }
 
-.resto {
-  height: auto;
-  margin: 0;
+.Resto {
+  padding-bottom: 20px;
 }
 
 .text_menu h4, .text_menu div {
@@ -448,10 +451,11 @@ i.fas.fa-mobile-alt, i.fas.fa-list-ul {
 
 .titre_restaurant {
   text-align: left;
+  font-size: 24px;
 }
 
 .Menu_restaurant {
-  width: 350px;
+  width: 90%;
   border-radius: 15px;
   display: flex;
   position: relative;
@@ -475,7 +479,7 @@ i.fas.fa-mobile-alt, i.fas.fa-list-ul {
 
 .img_menu {
   width: 100%;
-  height: 200px;
+  height: 170px;
   -o-object-fit: cover;
      object-fit: cover;
   border-top-left-radius: 10px;
@@ -483,7 +487,7 @@ i.fas.fa-mobile-alt, i.fas.fa-list-ul {
 }
 
 .img_menu--enchantée {
-  height: 200px;
+  height: 170px;
 }
 
 .img_restaurant {
@@ -501,25 +505,33 @@ i.fas.fa-mobile-alt, i.fas.fa-list-ul {
   border-bottom-right-radius: 10px;
   margin: 0;
   display: flex;
-  flex-direction: column;
+  align-items: center;
   height: 70px;
-  justify-content: space-around;
+  white-space: nowrap;
   padding: 10px 0;
 }
 
-.text_menu h4, .text_menu div {
-  font-size: 20px;
-  margin: 0px;
-  display: flex;
+.text {
+  flex: 1;
+  overflow: hidden;
+  padding: 10px;
+}
+
+.text h4 {
+  padding: 0;
   margin: 0;
-  align-items: center;
+}
+
+.text p {
+  padding: 0;
+  margin: 0;
+  color: black;
 }
 
 .icon {
-  left: 265px;
-  position: absolute;
-  bottom: 28px;
-  white-space: nowrap;
+  display: flex;
+  align-items: flex-end;
+  padding-right: 10px;
   stroke-width: 20px;
 }
 .icon:hover {
@@ -671,9 +683,8 @@ path {
 
 .titre_restaurant {
   font-weight: bold;
-  padding-left: 10px;
+  padding-left: 15px;
   padding-bottom: 15px;
-  font-size: 20px;
 }
 
 article {
@@ -836,7 +847,7 @@ h1 {
   text-decoration: none;
   background: #99E2D0;
   height: 100%;
-  width: 100px;
+  width: 60px;
   right: -100px;
   align-items: center;
   display: flex;
@@ -962,8 +973,8 @@ h1 {
 
 .button {
   padding: 15px 35px;
-  background: #fb3fa8;
-  background: linear-gradient(160deg, #fb3fa8 10%, #9e17bb 95%);
+  background: #ff79e1;
+  background: linear-gradient(174deg, rgba(255, 121, 225, 0.9444152661) 0%, #ca79ff 47%);
   color: #fff;
   border-radius: 50px;
   margin: 0;
@@ -1087,18 +1098,18 @@ ul li::before {
   }
 
   .Menu_restaurant {
-    width: 420px;
+    width: 80%;
   }
 
   .img_restaurant {
-    width: 420px;
+    width: 100%;
     position: relative;
     -o-object-fit: cover;
        object-fit: cover;
   }
 
   .text_menu {
-    width: 420px;
+    width: 100%;
     padding: 0 0 0 10px;
   }
   .text_menu .icon {
@@ -1192,7 +1203,8 @@ ul li::before {
   }
 
   .Menu_restaurant .restaurant__carte--carré {
-    transform: translate(280%, 10%);
+    top: 12px;
+    right: 10px;
   }
 }
 @media screen and (min-width: 1025px) {
@@ -1278,10 +1290,6 @@ ul li::before {
   }
 
   .entrées__met {
-    font-size: 25px;
-  }
-
-  .menu__price {
     font-size: 25px;
   }
 
