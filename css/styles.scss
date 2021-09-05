@@ -249,7 +249,7 @@ text-align: center;
    color: #fff;
    border-radius: 50px;
    margin-bottom: 40px;
-   border: none;
+   border-style: none;
    
       &:hover {
          background:linear-gradient(180deg, rgba(225,121,242,0.9) 9%, rgba(202,121,255,0.9) 49%);
@@ -710,8 +710,8 @@ justify-content: space-between;
    
       .icon {
       
-      align-items: right;
-      text-align: right;
+      align-items: center;
+      text-align:center;
       right: 10px;
       top:20px;
       }
@@ -901,7 +901,7 @@ margin: 60px 0;
 padding: 15px 35px;
 background: rgb(255,121,225);
 background: linear-gradient(174deg, rgba(255,121,225,0.9444152661064426) 0%, rgba(202,121,255,1) 47%);
-
+border-style: none;
 color: #fff;
 border-radius: 50px;
 margin: 0;

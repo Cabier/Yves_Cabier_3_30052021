@@ -324,7 +324,7 @@ footer {
   color: #fff;
   border-radius: 50px;
   margin-bottom: 40px;
-  border: none;
+  border-style: none;
 }
 .sub-header button:hover {
   background: linear-gradient(180deg, rgba(225, 121, 242, 0.9) 9%, rgba(202, 121, 255, 0.9) 49%);
@@ -784,8 +784,8 @@ h1 {
   justify-content: space-between;
 }
 .pagemenu__title .icon {
-  align-items: right;
-  text-align: right;
+  align-items: center;
+  text-align: center;
   right: 10px;
   top: 20px;
 }
@@ -975,6 +975,7 @@ h1 {
   padding: 15px 35px;
   background: #ff79e1;
   background: linear-gradient(174deg, rgba(255, 121, 225, 0.9444152661) 0%, #ca79ff 47%);
+  border-style: none;
   color: #fff;
   border-radius: 50px;
   margin: 0;
