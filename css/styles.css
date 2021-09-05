@@ -1049,11 +1049,11 @@ ul li::before {
   }
 
   .Menu_restaurant {
-    width: 380px;
+    width: 94%;
   }
 
   .img_restaurant {
-    width: 380px;
+    width: 100%;
     position: relative;
     -o-object-fit: cover;
        object-fit: cover;
@@ -1068,7 +1068,7 @@ ul li::before {
   }
 
   .text_menu {
-    width: 380px;
+    width: 100%;
     padding: 15px 15px 15px 15px;
     font-size: 20px;
   }
