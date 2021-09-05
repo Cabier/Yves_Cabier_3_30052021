@@ -318,7 +318,7 @@ footer {
 }
 .sub-header button {
   padding: 13px 15px;
-  box-shadow: 2px 2px 2px 2px #dedada;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   background: #e179f2;
   background: linear-gradient(180deg, #e179f2 9%, #ca79ff 49%);
   color: #fff;
@@ -328,7 +328,7 @@ footer {
 }
 .sub-header button:hover {
   background: linear-gradient(180deg, rgba(225, 121, 242, 0.9) 9%, rgba(202, 121, 255, 0.9) 49%);
-  box-shadow: #aea4a4;
+  box-shadow: rgba(0, 0, 0, 0.35);
 }
 
 /** background: lighten(rgba(225,121,242,1), $amount: 10);Section fonctionnement **/
@@ -510,6 +510,9 @@ i.fas.fa-mobile-alt, i.fas.fa-list-ul {
   white-space: nowrap;
   padding: 10px 0;
 }
+.text_menu .icon {
+  right: 9px;
+}
 
 .text {
   flex: 1;
@@ -604,6 +607,7 @@ i.fas.fa-mobile-alt, i.fas.fa-list-ul {
 }
 .icon heart-main {
   fill: transparent;
+  position: relative;
   cursor: pointer;
 }
 
@@ -616,6 +620,10 @@ path {
   transform-origin: center;
 }
 
+.heart-main {
+  position: relative;
+}
+
 .heart-main:hover {
   -webkit-animation: stroke-animation 1s ease-in-out forwards;
           animation: stroke-animation 1s ease-in-out forwards;
@@ -623,7 +631,7 @@ path {
 
 .heart-full {
   position: absolute;
-  right: 0;
+  right: 10px;
   opacity: 0;
 }
 

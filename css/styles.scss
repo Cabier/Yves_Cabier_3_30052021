@@ -243,7 +243,7 @@ text-align: center;
    
    button {
    padding: 13px 15px;
-   box-shadow: 2px 2px 2px 2px rgb(222, 218, 218);
+   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
    background: rgb(225,121,242);
    background: linear-gradient(180deg, rgba(225,121,242,1) 9%, rgba(202,121,255,1) 49%);
    color: #fff;
@@ -253,7 +253,7 @@ text-align: center;
    
       &:hover {
          background:linear-gradient(180deg, rgba(225,121,242,0.9) 9%, rgba(202,121,255,0.9) 49%);
-         box-shadow: darken(rgb(222, 218 ,218), $amount: 20%);
+         box-shadow: darken(rgba(0, 0, 0, 0.35) , $amount: 10%);
 
       }
       
@@ -442,7 +442,9 @@ display: flex;
       height: 70px;
       white-space: nowrap;
       padding: 10px 0;
-      
+         .icon {
+            right:9px;
+         }
    }
    .text {
       flex: 1;
@@ -519,7 +521,7 @@ transform: scale(1);
 .icon heart-main {
 
 fill:transparent;
-
+position: relative;
 cursor: pointer;
 
 
@@ -536,7 +538,9 @@ path {
 transform-origin: center;
 }
 
-
+.heart-main {
+   position: relative;
+}
 .heart-main:hover {
 animation: stroke-animation 1s ease-in-out forwards;
 
@@ -545,7 +549,7 @@ animation: stroke-animation 1s ease-in-out forwards;
 
 .heart-full {
    position: absolute;
-   right:0;
+   right:10px;
    opacity:0;
   
 }
