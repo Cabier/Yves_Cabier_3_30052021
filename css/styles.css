@@ -1,4 +1,4 @@
-
+@charset "UTF-8";
 * {
   box-sizing: border-box;
   font-family: "Roboto", sans-serif;
@@ -975,13 +975,11 @@ h1 {
 .button {
   padding: 15px 35px;
   box-shadow: rgba(0, 0, 0, 0.25) 0 5px 5px;
-  background: #ff79e1;
   background: linear-gradient(174deg, rgba(255, 121, 225, 0.9444152661) 0%, #ca79ff 47%);
   border-style: none;
   color: #fff;
   border-radius: 50px;
   margin: 0;
-  font-size: large;
   align-items: center;
 }
 .button:hover {
@@ -1072,6 +1070,10 @@ li::before {
   }
   .text_menu .icon {
     left: 300px;
+  }
+
+  .svg {
+    height: 10px;
   }
 }
 @media screen and (min-width: 600px) {

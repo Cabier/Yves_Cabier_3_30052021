@@ -561,6 +561,7 @@ cursor: pointer;
 svg {
 overflow: visible;
 width: 3rem;
+
 }
 
 path {
@@ -939,13 +940,13 @@ margin: 60px 0;
 .button {
 padding: 15px 35px;
 box-shadow:rgba(0, 0, 0, 0.25) 0 5px 5px;
-background: rgb(255,121,225);
+
 background: linear-gradient(174deg, rgba(255,121,225,0.9444152661064426) 0%, rgba(202,121,255,1) 47%);
 border-style: none;
 color: #fff;
 border-radius: 50px;
 margin: 0;
-font-size: large;
+
 align-items: center;
    
       &:hover {
@@ -1027,7 +1028,9 @@ footer .pro{
      }
     
    }
-   
+   .svg {
+      height:10px;
+   }
    
 
 }
