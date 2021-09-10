@@ -967,10 +967,6 @@ h1 {
   text-align: center;
   margin: 60px 0;
 }
-.subfooterbutton:hover {
-  background: linear-gradient(180deg, rgba(225, 121, 242, 0.9) 9%, rgba(202, 121, 255, 0.9) 49%);
-  box-shadow: rgba(0, 0, 0, 0.35) 0 5px 5px;
-}
 
 .button {
   padding: 15px 35px;
